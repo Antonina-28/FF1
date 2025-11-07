@@ -1,12 +1,97 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class="page">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ff1-landing</title>
+    <link rel="icon" type="image/x-icon" href="#">
+    <title>ФФ1 самый быстрый фулфилмент под ключ!</title>
   </head>
-  <body>
-    <h1>Hello World!</h1>
+  <body class="page__body">
+    <header class="header">
+      <div class="header__wrapper container">
+        <button class="header__burger visually-hidden" type="button" aria-label="Открыть меню">Открыть меню</button>
+        <img src="#" alt="Логотип фулфилмента ФФ1" class="header__logo logo">
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item"><a href="#" class="header__link">Услуги</a></li>
+            <li class="header__item"><a href="#" class="header__link">Тарифы</a></li>
+            <li class="header__item"><a href="#" class="header__link">Отзывы</a></li>
+            <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
+          </ul>
+          <ul class="header__socials">
+            <li class="header__social-item"><a href="#" class="header__social-link header__social-link--tg">Telegram</a></li>
+            <li class="header__social-item"><a href="#" class="header__social-link header__social-link--wa">WhatsApp</a></li>
+          </ul>
+          <button class="header__btn button">Оставить заявку</button>
+        </nav>
+      </div>
+    </header>
+    <main class="page__main main">
+      <div class="main__wrapper container">
+        <section class="hero">
+          <img src="#" alt="Логотип фулфилмента ФФ1" class="hero__logo logo">
+          <h1 class="hero__title">Самый быстрый <span>фулфилмент</span> под ключ — скорость как на пит-лейне Формулы-1</h1>
+          <button class="hero__btn button">Связаться</button>
+        </section>
+        <section class="advantages">
+          <div class="advantages__wrapper container">
+            <p class="advantages__text">Принимаем. Упаковываем. Доставляем. С персональной поддержкой <span>24/7.</span></p>
+            <h2 class="advantages__title">Наши преимущества</h2>
+            <ol class="advantages__list">
+              <li class="advantages__item">
+                <h3 class="advantages__item-title">Скорость</h3>
+                <p class="advantages__item-text">Оперативность, которая сокращает время на обработку и доставку до <span>30%.</span></p>
+              </li>
+              <li class="advantages__item">
+                <h3 class="advantages__item-title">Комплексный сервис</h3>
+                <p class="advantages__item-text">От приема товара до доставки клиенту — все в одном месте.</p>
+              </li>
+              <li class="advantages__item">
+                <h3 class="advantages__item-title">Интеграция</h3>
+                <p class="advantages__item-text">С Wildberries, Ozon и другими платформами</p>
+              </li>
+              <li class="advantages__item">
+                <h3 class="advantages__item-title">Персональный менеджер</h3>
+                <p class="advantages__item-text">Поможет пройти все этапы от забора до поставки на маркетплейс.</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+        <section class="services">
+          <div class="services__wrapper container">
+            <h2 class="visually-hidden">Наши услуги</h2>
+            <ul class="services__list">
+              <li class="services__item">
+                <img src="#" alt="Варианты работы по доставки" class="services__item-image">
+                <h3 class="services__item-title">Доставка по FBO, FBY и FBS</h3>
+                <p class="services__item-text">Мы выходим на площадки маркетплейсов без промедления: FBO, FBY и FBS — всё под контролем нашей команды.</p>
+              </li>
+              <li class="services__item">
+                <img src="#" alt="Самая быстрая доставка" class="services__item-image">
+                <h3 class="services__item-title">Express доставка</h3>
+                <p class="services__item-text">Молниеносные отгрузки на Яндекс Маркет и Ozon. Ускоряем продажи — прирост до 33 % за счёт скорости.</p>
+              </li>
+                  <li class="services__item">
+                    <img src="#" alt="Круглосуточный режим работы" class="services__item-image">
+                    <h3 class="services__item-title">Работаем 24/7</h3>
+                    <p class="services__item-text">Каждый день — новая история. Отгрузки без выходных, потому что скорость не ждёт.</p>
+                  </li>
+              <li class="services__item">
+                <img src="#" alt="Комплексное сопровождение на всех этапах" class="services__item-image">
+                <h3 class="services__item-title">Полный контроль</h3>
+                <p class="services__item-text">Прозрачный документооборот, видеофиксация, остатки и отчётность — полный контроль, как в гоночной команде.</p>
+              </li>
+            </ul>
+            <div class="services__dots-wrapper">
+              <button class="services__dot"></button>
+              <button class="services__dot"></button>
+              <button class="services__dot"></button>
+              <button class="services__dot"></button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
