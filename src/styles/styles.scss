@@ -1,6 +1,14 @@
 // common
-@import 'common/variables';
 @import 'common/mixins';
+@import 'common/fonts';
+@import 'common/variables';
+@import 'common/visually-hidden';
+@import 'common/global';
 
 // blocks
 @import 'blocks/buttons';
+@import 'blocks/main-nav';
+@import 'blocks/page';
+@import 'blocks/header';
+@import 'blocks/site-list';
+@import 'blocks/social-list';
