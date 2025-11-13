@@ -4,8 +4,20 @@ $mobile-width-only: 767px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 
-// Fonts
-
 // Colors (fonts, buttons, form)
+$brend-color: #d40000;
+$white: #ffffff;
+$color-text: #141414;
+$color-text-light-f4: #f4f4f4;
+$color-text-light-f6: #f6f6f6;
+$color-toggle: #969696;
 
 // Background Colors
+$background-header: #242424;
+$background-reviews: #262626;
+$background-rezult: #424242;
+
+// Gradients
+$background-footer: linear-gradient(180deg, rgba(188, 188, 188, 0.46) 0%, rgba(0, 0, 0, 0.46) 100%);
+$background-calc: radial-gradient(circle, #FFFFFF 0%, #7D7D7D 100%);
+$background-calc2: linear-gradient(180deg, #141414 8%, #7A7A7A 36%, #7A7A7A 63%, #141414 93%);

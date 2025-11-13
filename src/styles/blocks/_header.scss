@@ -1,0 +1,12 @@
+.header {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    background-image: url("../../images/icons/mask.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__logo {
+    margin-left: 56px;
+}

@@ -1,0 +1,110 @@
+
+.main-nav__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.main-nav__list {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  padding: 6px;
+  top: 13px;
+  right: 15px;
+  z-index: 2;
+  display: block;
+  width: 30px;
+  height: 23px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: $brend-color;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  background-image: url("../../images/icons/burger.svg");
+}
+
+.main-nav--opened .main-nav__toggle {
+  background-image: url("#");
+}
+
+.main-nav--opened .main-nav__wrapper {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 83%;
+    padding: 20px;
+    padding-bottom: 80px;
+    z-index: 2;
+    background-color: $background-header;
+    color: $color-text-light-f4;
+  }
+}
+
+.main-nav--opened .main-nav__btn {
+    position: relative;
+    padding: 11px 30px;
+    min-width: 250px;
+    background-color: $brend-color;
+    color: $color-text-light-f4;
+    border: none;
+    border-radius: 10px;
+    font-family: $secondary-font-demi;
+    font-size: 20px;
+    text-align: start;
+    cursor: pointer;
+
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+}
+
+.main-nav--closed .main-nav__wrapper,
+.main-nav--closed .main-nav__btn {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-nav__toggle:active {
+    opacity: 0.5;
+}
+
+.main-nav__btn::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: $white;
+    border-radius: 50%;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url("../../images/icons/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}

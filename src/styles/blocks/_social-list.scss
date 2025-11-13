@@ -1,0 +1,25 @@
+.social-list {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.social-list__link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid $brend-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.social-list__link--tg {
+    background-image: url('../../images/icons/tg.svg');
+}
+
+.social-list__link--wa {
+    background-image: url('../../images/icons/wa.svg');
+}

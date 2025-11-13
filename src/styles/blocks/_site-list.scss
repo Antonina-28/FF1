@@ -1,0 +1,15 @@
+.site-list__link {
+    color: $color-text-light-f4;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.site-list__link:hover,
+.site-list__link:focus {
+    color: $brend-color;
+}
+
+.site-list__link:active {
+    color: $brend-color;
+    opacity: 0.5;
+}

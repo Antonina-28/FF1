@@ -1,0 +1,17 @@
+// Переменные для шрифтов
+$primary-font: "FuturaPT-Book", "Arial", sans-serif;
+$secondary-font-heavy: "FuturaPT-Heavy", "Arial", sans-serif;
+$secondary-font-demi: "FuturaPT-Demi", "Arial", sans-serif;
+$secondary-font-medium: "FuturaPT-Medium", "Arial", sans-serif;
+$secondary-font-mediumitalic: "FuturaPT-MediumItalic", "Arial", sans-serif;
+$secondary-font-bolditalic: "FuturaBT-BoldItalic", "Arial", sans-serif;
+$opensans-bold: "OpenSans-Bold", "Arial", sans-serif;
+
+// Подключение шрифтов
+@include font-face("FuturaPT-Book", 400, normal, url("../../fonts/FuturaPT-Book.woff2") format("woff2"));
+@include font-face("FuturaPT-Medium", 500, normal, url("../../fonts/FuturaPT-Medium.woff2") format("woff2"));
+@include font-face("FuturaPT-MediumItalic", 500, italic, url("../../fonts/FuturaPT-mediumItalic.woff2") format("woff2"));
+@include font-face("FuturaPT-Demi", 600, normal, url("../../fonts/FuturaPT-demi.woff2") format("woff2"));
+@include font-face("FuturaBT-BoldItalic", 700, italic, url("../../fonts/FuturaMdBT-mediumItalic.woff2") format("woff2"));
+@include font-face("OpenSans-Bold", 700, normal, url("../../fonts/OpenSans-Bold.woff2") format("woff2"));
+@include font-face("FuturaPT-Heavy", 900, normal, url("../../fonts/FuturaPT-heavy.woff2") format("woff2"));
