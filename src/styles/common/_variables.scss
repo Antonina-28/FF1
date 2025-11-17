@@ -1,8 +1,10 @@
-// Display Resolution
+// Базовый размер шрифта для rem расчетов
+$base-font-size: 16px;
 
-$mobile-width-only: 767px;
-$tablet-width: 768px;
-$desktop-width: 1440px;
+// Display Resolution
+$mobile-width-only: 47.9375rem;  // 767px / 16
+$tablet-width: 48rem;           // 768px / 16  
+$desktop-width: 90rem;          // 1440px / 16
 
 // Colors (fonts, buttons, form)
 $brend-color: #d40000;

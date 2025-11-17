@@ -1,12 +1,24 @@
 .header {
-    min-height: 50px;
+    min-height: rem(50);
     display: flex;
     align-items: center;
     background-image: url("../../images/icons/mask.svg");
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include tablet {
+        background-image: url("../../images/icons/vector-header.svg");
+        background-size: rem(1620);
+        background-position: left rem(-324) top;
+        justify-content: space-between;
+    }
 }
 
 .header__logo {
-    margin-left: 56px;
+    margin-left: rem(56);
+
+    @include tablet {
+        margin-left: rem(36);
+        margin-right: rem(20);
+    }
 }

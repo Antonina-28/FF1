@@ -1,3 +1,9 @@
+.site-list {
+    @include tablet {
+        font-size: rem(16);
+    }
+}
+
 .site-list__link {
     color: $color-text-light-f4;
     text-decoration: none;
