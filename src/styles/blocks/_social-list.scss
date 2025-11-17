@@ -1,11 +1,16 @@
 .social-list {
     flex-direction: row;
     justify-content: flex-end;
+
+    @include tablet {
+        position: absolute;
+        left: rem(195);
+    }
 }
 
 .social-list__link {
-    width: 40px;
-    height: 40px;
+    width: rem(40);
+    height: rem(40);
     display: flex;
     align-items: center;
     justify-content: center;
