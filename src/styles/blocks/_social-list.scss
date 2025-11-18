@@ -1,12 +1,27 @@
 @use '../common/all-dependencies' as *;
 
 .social-list {
+    @include mobile-only {
+        display: none;
+    }
+
+    position: absolute;
+    right: 20px;
+    top: 245px;
+    z-index: 3;
     flex-direction: row;
     justify-content: flex-end;
 
     @include tablet {
-        position: absolute;
-        left: rem(195);
+        position: relative;
+        top: auto;
+        right: inherit;
+        gap: rem(10);
+        margin-right: rem(20);
+    }
+
+    @include desktop {
+        margin-right: rem(300);
     }
 }
 
@@ -21,6 +36,14 @@
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+
+    @include tablet {
+        border: none;
+    }
+
+    @include desktop {
+        border: 1px solid $brend-color;
+    }
 }
 
 .social-list__link--tg {

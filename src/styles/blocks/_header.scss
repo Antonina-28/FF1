@@ -2,6 +2,7 @@
 
 .header {
     min-height: rem(60);
+    max-width: rem(1580);
     display: flex;
     align-items: center;
     background-image: url("../../images/icons/mask.svg");
@@ -10,17 +11,20 @@
 
     @include tablet {
         background-image: url("../../images/icons/vector-header.svg");
-        background-size: 100%;
+        background-size: cover;
         background-position: center top;
         justify-content: space-between;
     }
 
     @include desktop {
+        width: rem(1580);
+        margin: 0 auto;
+        justify-content: flex-start;
     }
 }
 
 .header__logo {
-    width: min(#{rem(188)}, max(#{rem(139)}, 10vw));
+    width: clamp(139px, 10vw, 188px);
     height: auto;
     aspect-ratio: 188 / 37;
     object-fit: contain;
@@ -30,5 +34,9 @@
     @include tablet {
         margin-left: rem(36);
         margin-right: rem(20);
+    }
+
+    @include desktop {
+        margin-right: rem(30);
     }
 }
