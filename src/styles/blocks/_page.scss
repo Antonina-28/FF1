@@ -1,5 +1,8 @@
+@use '../common/all-dependencies' as *;
+
 .page {
   height: 100%;
+  font-size: $base-font-size;
 }
 
 .page__body {

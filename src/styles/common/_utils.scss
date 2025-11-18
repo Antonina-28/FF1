@@ -1,21 +1,6 @@
+@use 'sass:math';
+
 // Функция для перевода px в rem
 @function rem($pixels) {
-  @return #{$pixels / 16}rem;
+  @return #{math.div($pixels, 16)}rem;
 }
-
-// Функция для перевода px в em
-@function em($pixels, $context: 16) {
-  @return calc($pixels / $context) * 1em;
-}
-
-// Миксин для скрытия элемента визуально, но доступного для скринридеров
-// @mixin visually-hidden {
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-//   padding: 0;
-//   border: 0;
-//   clip: rect(0 0 0 0);
-//   overflow: hidden;
-// }

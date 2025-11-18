@@ -1,5 +1,7 @@
+@use '../common/all-dependencies' as *;
+
 .header {
-    min-height: rem(50);
+    min-height: rem(60);
     display: flex;
     align-items: center;
     background-image: url("../../images/icons/mask.svg");
@@ -8,13 +10,21 @@
 
     @include tablet {
         background-image: url("../../images/icons/vector-header.svg");
-        background-size: rem(1620);
-        background-position: left rem(-324) top;
+        background-size: 100%;
+        background-position: center top;
         justify-content: space-between;
+    }
+
+    @include desktop {
     }
 }
 
 .header__logo {
+    width: min(#{rem(188)}, max(#{rem(139)}, 10vw));
+    height: auto;
+    aspect-ratio: 188 / 37;
+    object-fit: contain;
+
     margin-left: rem(56);
 
     @include tablet {
