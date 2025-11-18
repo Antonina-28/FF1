@@ -24,3 +24,9 @@ body {
   line-height: rem(20);
   color: $color-text;
 }
+
+p span,
+h1 span,
+h2 span {
+  color: $brend-color;
+}

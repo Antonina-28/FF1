@@ -1,1 +1,69 @@
 @use '../common/all-dependencies' as *;
+
+.hero {
+    position: relative;
+    width: 95%;
+    height: 482px;
+    margin: 0 auto;
+    margin-top: rem(38);
+    margin-bottom: rem(21);
+    background-image: url("../../images/hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+
+    @include tablet {
+        background-position: bottom;
+    }
+
+    @include desktop-small {
+        background-image: url("../../images/hero-desktop.jpg");        
+        height: 702px;       
+    }
+}
+
+.hero__logo {
+    display: none;
+
+    @include tablet {
+        position: absolute;
+        bottom: 185px;
+        left: 60px;
+        display: block;
+    }
+}
+
+.hero__title {
+    max-width: rem(319);
+    margin: 0 auto;
+    padding-top: 34px;
+    font-family: $secondary-font-heavy;
+    font-size: rem(20);
+    color: $color-text-light-f4;
+    text-transform: uppercase;
+
+    @include tablet {
+        position: absolute;
+        bottom: 100px;
+        left: 60px;
+        max-width: rem(746);
+        font-size: rem(31);
+        line-height: 100%;
+
+        br {
+            display: none;
+        }
+    }
+}
+
+.hero__btn {
+    position: absolute;
+    bottom: 101px;
+    right: -24px;
+    padding: 6px 10px 10px;
+    font-family: $secondary-font-heavy;
+    font-size: rem(16);
+    border: 1px solid $brend-color;
+    border-radius: 2px;
+    transform: rotate(-90deg);
+}

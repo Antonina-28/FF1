@@ -1,1 +1,6 @@
 @use '../common/all-dependencies' as *;
+
+.button {
+    background-color: $brend-color;
+    color: $color-text-light-f6;
+}
