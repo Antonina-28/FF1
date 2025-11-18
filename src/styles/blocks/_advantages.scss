@@ -1,0 +1,17 @@
+@use '../common/all-dependencies' as *;
+
+.advantages__text {
+    position: relative;
+    max-width: 63%;
+    margin: 0 auto;
+    font-family: $secondary-font-bolditalic;
+    font-size: rem(16);
+    line-height: 87%;
+}
+
+.advantages__text::before {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url("../../images/icons/line.svg");
+}
