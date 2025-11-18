@@ -1,4 +1,8 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+
+@use './variables' as *;
+@use './utils' as *;
+
 *,
 *::before,
 *::after {

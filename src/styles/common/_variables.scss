@@ -6,6 +6,15 @@ $mobile-width-only: 47.9375rem;  // 767px / 16
 $tablet-width: 48rem;           // 768px / 16  
 $desktop-width: 90rem;          // 1440px / 16
 
+// Переменные для шрифтов
+$primary-font: "FuturaPT-Book", "Arial", sans-serif;
+$secondary-font-heavy: "FuturaPT-Heavy", "Arial", sans-serif;
+$secondary-font-demi: "FuturaPT-Demi", "Arial", sans-serif;
+$secondary-font-medium: "FuturaPT-Medium", "Arial", sans-serif;
+$secondary-font-mediumitalic: "FuturaPT-MediumItalic", "Arial", sans-serif;
+$secondary-font-bolditalic: "FuturaBT-BoldItalic", "Arial", sans-serif;
+$opensans-bold: "OpenSans-Bold", "Arial", sans-serif;
+
 // Colors (fonts, buttons, form)
 $brend-color: #d40000;
 $white: #ffffff;

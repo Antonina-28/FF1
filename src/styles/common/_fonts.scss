@@ -1,11 +1,5 @@
-// Переменные для шрифтов
-$primary-font: "FuturaPT-Book", "Arial", sans-serif;
-$secondary-font-heavy: "FuturaPT-Heavy", "Arial", sans-serif;
-$secondary-font-demi: "FuturaPT-Demi", "Arial", sans-serif;
-$secondary-font-medium: "FuturaPT-Medium", "Arial", sans-serif;
-$secondary-font-mediumitalic: "FuturaPT-MediumItalic", "Arial", sans-serif;
-$secondary-font-bolditalic: "FuturaBT-BoldItalic", "Arial", sans-serif;
-$opensans-bold: "OpenSans-Bold", "Arial", sans-serif;
+// _fonts.scss
+@use './mixins' as *;
 
 // Подключение шрифтов
 @include font-face("FuturaPT-Book", 400, normal, url("../../fonts/FuturaPT-Book.woff2") format("woff2"));

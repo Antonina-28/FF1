@@ -1,3 +1,5 @@
+@use '../common/all-dependencies' as *;
+
 .social-list {
     flex-direction: row;
     justify-content: flex-end;

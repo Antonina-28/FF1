@@ -1,15 +1,12 @@
 // common
-@import 'common/utils';
-@import 'common/variables';
-@import 'common/mixins';
-@import 'common/fonts';
-@import 'common/visually-hidden';
-@import 'common/global';
+@use 'common/all-dependencies' as *;
+@use 'common/visually-hidden' as *;
+@use 'common/global' as *;
 
 // blocks
-@import 'blocks/buttons';
-@import 'blocks/main-nav';
-@import 'blocks/page';
-@import 'blocks/header';
-@import 'blocks/site-list';
-@import 'blocks/social-list';
+@use 'blocks/buttons' as *;
+@use 'blocks/main-nav' as *;
+@use 'blocks/page' as *;
+@use 'blocks/header' as *;
+@use 'blocks/site-list' as *;
+@use 'blocks/social-list' as *;

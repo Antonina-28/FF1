@@ -1,3 +1,5 @@
+@use '../common/all-dependencies' as *;
+
 .site-list {
     @include tablet {
         font-size: rem(16);
