@@ -102,8 +102,31 @@
             </div>
           </div>
         </section>
-      </div>
-    </main>
+        <section class="price">
+          <h2 class="price__title">Мы работаем с самыми популярными маркетплейсами</h2>
+          <p class="price__text">Доставим <span>ваш товар</span> из склада к покупателю или от поставщика к складу.</p>
+          <button class="price__btn button" type="button">Скачать прайс-лист</button>
+        </section>
+        <section class="rate">
+          <h2 class="rate__title">Гибкие тарифы под ваши задачи</h2>
+          <p class="rate__text">Рассчитаем оптимальное решение по маршрутам, срокам и объёмам.</p>
+          <button class="rate__btn button" type="button">Оставить заявку</button>
+          <img class="rate__image" src="./src/images/icons/logo.svg" width="140" height="33" alt="Логотип ФФ1" >
+          <span class="rate__brend-text">фулфилмент</span>
+        </section>
+        <section class="calculator">
+          <h2 class="calculator__title">Не жди сигнала — <span>рассчитай прямо сейчас!</span></h2>
+          <p class="calculator__text">Рассчитай стоимость фулфилмента за секунды</p>
+          <div class="calculator__btn-wrapper">
+            <form class="calculator__form form" action="#" method="get">
+              <legend class="form__legend">Выберите схему работы:</legend>
+              <input class="form__input" type="radio" name="work-scheme" id="fbo" value="fbo">
+              <label class="form__label" for="fbo">FBO</label>
+              <input class="form__input" type="radio" name="work-scheme" id="fbs" value="fbs" checked> 
+              <label class="form__label" for="fbs">FBS</label>
+          </div>
+        </section>
+      </main>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
