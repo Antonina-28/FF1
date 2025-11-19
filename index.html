@@ -119,11 +119,53 @@
           <p class="calculator__text">Рассчитай стоимость фулфилмента за секунды</p>
           <div class="calculator__btn-wrapper">
             <form class="calculator__form form" action="#" method="get">
+              <fieldset class="form__fieldset"> 
               <legend class="form__legend">Выберите схему работы:</legend>
               <input class="form__input" type="radio" name="work-scheme" id="fbo" value="fbo">
               <label class="form__label" for="fbo">FBO</label>
               <input class="form__input" type="radio" name="work-scheme" id="fbs" value="fbs" checked> 
               <label class="form__label" for="fbs">FBS</label>
+              </fieldset>
+              <fieldset class="form__fieldset">
+              <legend class="form__legend">Забор товара в черте города:</legend>
+              <input class="form__input" type="radio" name="pickup" id="not required" value="not required" checked>
+              <label class="form__label" for="not required">Забор не требуется</label>
+              <input class="form__input" type="radio" name="pickup" id="company" value="company">
+              <label class="form__label" for="company">Транспортная компания</label>
+              <input class="form__input" type="radio" name="pickup" id="cargo" value="cargo">
+              <label class="form__label" for="cargo">Карго</label>
+              </fieldset>
+              <fieldset class="form__fieldset">
+                <div style="display: flex;">
+              <legend class="form__legend">Количество товаров:</legend>
+              <p class="form__legend">Товаров <span class="form__legend">0</span></p> 
+              </div>             
+              <input class="form__range" type="range" name="quantity of goods" id="quantity of goods" min="0" max="10000" value="0" step="1">
+              <div style="display: flex;">
+                <p class="form__legend">0 товаров</p>
+                <p class="form__legend">10000</p>
+              </div>
+              </fieldset>
+              <fieldset class="form__fieldset">
+                <div style="display: flex;">
+              <legend class="form__legend">Укажите примерное кол-во коробов (60х40х40):</legend>
+              <p class="form__legend">Коробов <span class="form__legend">0</span></p>
+                </div>
+                <input class="form__range" type="range" name="quantity of boxes" id="quantity of boxes" min="0" max="10000" value="0" step="1">
+                <div style="display: flex;">
+                  <p class="form__legend">0 коробов</p>
+                  <p class="form__legend">10000</p>
+                </div>
+              </fieldset>
+              <fieldset class="form__fieldset">
+              <legend class="form__legend">Маркетплейс:</legend>
+              <input class="form__input" type="radio" name="marketplace" id="wildberries" value="wildberries" checked>
+              <label class="form__label" for="wildberries">Wildberries</label>
+              <input class="form__input" type="radio" name="marketplace" id="ozon" value="ozon">
+              <label class="form__label" for="ozon">Ozon</label>
+              <input class="form__input" type="radio" name="marketplace" id="yandex-market" value="yandex-market">
+              <label class="form__label" for="yandex-market">Яндекс Маркет</label>
+              </fieldset>
           </div>
         </section>
       </main>
