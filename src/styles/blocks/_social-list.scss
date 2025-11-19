@@ -25,6 +25,21 @@
     }
 }
 
+.social-list__item {
+    width: rem(40);
+    height: rem(40);
+    border-radius: 50%;
+    border: 1px solid $brend-color;
+
+    &:hover {
+        opacity: 0.5;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}
+
 .social-list__link {
     width: rem(40);
     height: rem(40);
@@ -48,6 +63,7 @@
 
 .social-list__link--tg {
     background-image: url('../../images/icons/tg.svg');
+    background-position: left 4px center;
 }
 
 .social-list__link--wa {
