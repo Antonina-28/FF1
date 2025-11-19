@@ -1,0 +1,51 @@
+@use '../common/all-dependencies' as *;
+
+.article__container {
+  position: relative;
+}
+
+.article__text {
+  position: absolute;
+  right: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  padding: 2px 30px;
+  font-family: $secondary-font-bolditalic;
+  font-size: rem(16);
+  line-height: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: italic;
+  background-color: $white;
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  z-index: 2;
+
+  @include tablet {
+    font-size: rem(24);
+    padding: 5px 30px;
+  }
+
+  & p {
+    margin: 0;
+  }
+
+  & p:first-child {
+    @include tablet {
+        padding-left: 50px;
+    }
+  }
+
+  & p:last-child {
+    padding-left: 25px;
+  }
+}
+
+.article__line img {
+  width: 100vw;
+  height: 26px;
+
+  @include tablet {
+    height: 48px;
+  }
+}

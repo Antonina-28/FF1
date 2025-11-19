@@ -30,3 +30,13 @@ h1 span,
 h2 span {
   color: $brend-color;
 }
+
+p, h1, h2, h3 {
+  margin: 0;
+}
+
+ol, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
