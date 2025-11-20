@@ -1,0 +1,35 @@
+@use '../common/all-dependencies' as *;
+
+.calculator {
+    background: $background-calc;
+    color: $white;
+}
+
+.calculator__wrapper {
+    padding: 55px 15px 26px;
+}
+
+.calculator__title {
+    margin-bottom: 20px;
+    font-family: $secondary-font-bolditalic;
+    font-size: rem(36);
+    line-height: normal;
+    font-style: italic;
+    text-transform: uppercase;   
+}
+
+.calculator__text {
+    margin-bottom: 55px;
+    font-family: $secondary-font-btMediumItalic;
+    font-size: rem(20);
+    line-height: normal;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.calculator__container {
+    padding: 24px 18px;
+    background: $background-calc2;
+    border-radius: 20px;
+    border: 3px solid $brend-color;
+}
