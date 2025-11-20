@@ -6,8 +6,8 @@ export class ResponsiveRem {
             minWidth: 320,
             maxWidth: 1920,
             baseFontSize: 16,
-            minFontSize: 12,
-            maxFontSize: 20,
+            minFontSize: 16,
+            maxFontSize: 80,
             ...options
         };
         
