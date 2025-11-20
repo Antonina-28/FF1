@@ -17,14 +17,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./src/images/favicon/favicon-16x16.png">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="/manifest.json">
-    <link rel="preload" href="./src/fonts/FuturaMd bt-medium_italic.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./src/fonts/FuturaMD bt-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./src/fonts/FuturaMdBt-boldItalic.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./src/fonts/FuturaPT-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./src/fonts/FuturaPT-Book.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./src/fonts/FuturaPT-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./src/fonts/FuturaPT-mediumItalic.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./src/fonts/FuturaPT-demi.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./src/fonts/FuturaMdBT-mediumItalic.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./src/fonts/FuturaMdBt-boldItalic.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./src/fonts/OpenSans-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./src/fonts/Goldman-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preload" href="./src/fonts/FuturaPT-heavy.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <title>ФФ1 самый быстрый фулфилмент под ключ!</title>
   </head>
   <body class="page__body">
@@ -32,7 +34,7 @@
       <a class="header__link" href="#">
         <img class="header__logo logo" src="./src/images/icons/logo.svg" width="188" height="37" alt="Логотип фулфилмента ФФ1">
       </a>
-      <ul class="main-nav__list main-nav__list--social social-list">
+      <ul class="header__list social-list">
         <li class="social-list__item"><a href="#" class="social-list__link social-list__link--tg">
           <span class="visually-hidden">Фулфилмент в Телеграм</span></a></li>
         <li class="social-list__item"><a href="#" class="social-list__link social-list__link--wa">
@@ -51,7 +53,7 @@
           </ul>
         </div>
       </nav>
-      <button class="main-nav__btn button">Оставить заявку</button>
+      <button class="header__btn button">Оставить заявку</button>
     </header>
     <main class="page__main main">
       <div class="main__wrapper container">
@@ -61,9 +63,10 @@
           <button class="hero__btn button">Связаться</button>
         </section>
         <article class="article">
+          <h2 class="visually-hidden">Забота о вашем товаре на всех этапах</h2>
           <div class="article__container">
             <div class="article__line">
-              <img src="/src/images/icons/line-duble.svg" width="auto" height="48">
+              <img src="/src/images/icons/line-duble.svg" height="48" alt="Декоративные красные линии">
             </div>
             <div class="article__text">
               <p>Принимаем. Упаковываем. Доставляем.</p>
@@ -150,77 +153,79 @@
           <div class="calculator__btn-wrapper">
             <form class="calculator__form form" action="#" method="get">
               <fieldset class="form__fieldset"> 
-              <legend class="form__legend">Выберите схему работы:</legend>
-              <input class="form__input" type="radio" name="work-scheme" id="fbo" value="fbo">
-              <label class="form__label" for="fbo">FBO</label>
-              <input class="form__input" type="radio" name="work-scheme" id="fbs" value="fbs" checked> 
-              <label class="form__label" for="fbs">FBS</label>
+                <legend class="form__legend">Выберите схему работы:</legend>
+                <input class="form__input" type="radio" name="work-scheme" id="fbo" value="fbo">
+                <label class="form__label" for="fbo">FBO</label>
+                <input class="form__input" type="radio" name="work-scheme" id="fbs" value="fbs" checked> 
+                <label class="form__label" for="fbs">FBS</label>
               </fieldset>
               <fieldset class="form__fieldset">
-              <legend class="form__legend">Забор товара в черте города:</legend>
-              <input class="form__input" type="radio" name="pickup" id="not required" value="not required" checked>
-              <label class="form__label" for="not required">Забор не требуется</label>
-              <input class="form__input" type="radio" name="pickup" id="company" value="company">
-              <label class="form__label" for="company">Транспортная компания</label>
-              <input class="form__input" type="radio" name="pickup" id="cargo" value="cargo">
-              <label class="form__label" for="cargo">Карго</label>
+                <legend class="form__legend">Забор товара в черте города:</legend>
+                <input class="form__input" type="radio" name="pickup" id="pickup-not-required" value="not-required" checked>
+                <label class="form__label" for="pickup-not-required">Забор не требуется</label>
+                <input class="form__input" type="radio" name="pickup" id="company" value="company">
+                <label class="form__label" for="company">Транспортная компания</label>
+                <input class="form__input" type="radio" name="pickup" id="cargo" value="cargo">
+                <label class="form__label" for="cargo">Карго</label>
               </fieldset>
               <fieldset class="form__fieldset">
-                <div style="display: flex;">
-              <legend class="form__legend">Количество товаров:</legend>
-              <p class="form__legend">Товаров <span class="form__legend">0</span></p> 
-              </div>             
-              <input class="form__range" type="range" name="quantity of goods" id="quantity of goods" min="0" max="10000" value="0" step="1">
-              <div style="display: flex;">
-                <p class="form__legend">0 товаров</p>
-                <p class="form__legend">10000</p>
+                <legend class="form__legend">Количество товаров:</legend>
+                <div class="form__wrapper">
+                  <span class="form__legend">Товаров <span class="form__legend">0</span></span>
+                </div>
+                <input class="form__range" type="range" name="quantity-of-goods" id="quantity-of-goods" min="0" max="10000" value="0" step="1">
+                <div class="form__range-labels">
+                  <span class="form__range-min form__legend">0 товаров</span>
+                  <span class="form__range-max form__legend">10000</span>
+                </div>
+              </fieldset>
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Укажите примерное кол-во коробов (60х40х40):</legend>
+                <div class="form__wrapper">
+                  <span class="form__legend">Коробов <span class="form__legend">0</span></span>
+                </div>
+                <input class="form__range" type="range" name="quantity-of-boxes" id="quantity-of-boxes" min="0" max="10000" value="0" step="1">
+                <div class="form__range-labels">
+                  <span class="form__range-min form__legend">0 коробов</span>
+                  <span class="form__range-max form__legend">10000</span>
+                </div>
+              </fieldset>
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Маркетплейс:</legend>
+                <input class="form__input" type="radio" name="marketplace" id="wildberries" value="wildberries" checked>
+                <label class="form__label" for="wildberries">Wildberries</label>
+                <input class="form__input" type="radio" name="marketplace" id="ozon" value="ozon">
+                <label class="form__label" for="ozon">Ozon</label>
+                <input class="form__input" type="radio" name="marketplace" id="yandex-market" value="yandex-market">
+                <label class="form__label" for="yandex-market">Яндекс Маркет</label>
+              </fieldset>
+              <fieldset class="form__fieldset">
+                <legend class="form__legend">Выберите работы:</legend>
+                <input class="form__input" type="radio" name="work-types" id="acceptance" value="acceptance" checked>
+                <label class="form__label" for="acceptance">Маркировка товара</label>
+                <input class="form__input" type="radio" name="work-types" id="defect" value="defect" checked>
+                <label class="form__label" for="defect">Проверка на брак</label>
+                <input class="form__input" type="radio" name="work-types" id="tag" value="tag" checked>
+                <label class="form__label" for="tag">Убрать бирку</label>
+                <input class="form__input" type="radio" name="work-types" id="repackaging" value="repackaging" checked>
+                <label class="form__label" for="repackaging">Переупаковка</label>
+                <input class="form__input" type="radio" name="work-types" id="insert" value="insert" checked>
+                <label class="form__label" for="insert">Вложение вкладыша</label>
+              </fieldset>
+              <div class="form__total total">
+                <h3 class="total__title">ИТОГ:</h3>
+                <dl class="total__list">
+                  <div class="total__item">
+                    <dt class="total__name">Наименование</dt>
+                    <dd class="total__value">Сумма</dd>
+                  </div>
+                </dl>
               </div>
-              </fieldset>
-              <fieldset class="form__fieldset">
-                <div style="display: flex;">
-              <legend class="form__legend">Укажите примерное кол-во коробов (60х40х40):</legend>
-              <p class="form__legend">Коробов <span class="form__legend">0</span></p>
-                </div>
-                <input class="form__range" type="range" name="quantity of boxes" id="quantity of boxes" min="0" max="10000" value="0" step="1">
-                <div style="display: flex;">
-                  <p class="form__legend">0 коробов</p>
-                  <p class="form__legend">10000</p>
-                </div>
-              </fieldset>
-              <fieldset class="form__fieldset">
-              <legend class="form__legend">Маркетплейс:</legend>
-              <input class="form__input" type="radio" name="marketplace" id="wildberries" value="wildberries" checked>
-              <label class="form__label" for="wildberries">Wildberries</label>
-              <input class="form__input" type="radio" name="marketplace" id="ozon" value="ozon">
-              <label class="form__label" for="ozon">Ozon</label>
-              <input class="form__input" type="radio" name="marketplace" id="yandex-market" value="yandex-market">
-              <label class="form__label" for="yandex-market">Яндекс Маркет</label>
-              </fieldset>
-              <fieldset class="form__fieldset">
-              <legend class="form__legend">Выберите работы:</legend>
-              <input class="form__input" type="radio" name="work-types" id="acceptance" value="acceptance" checked>
-              <label class="form__label" for="acceptance">Маркировка товара</label>
-              <input class="form__input" type="radio" name="work-types" id="defect" value="defect" checked>
-              <label class="form__label" for="defect">Проверка на брак</label>
-              <input class="form__input" type="radio" name="work-types" id="tag" value="tag" checked>
-              <label class="form__label" for="tag">Убрать бирку</label>
-              <input class="form__input" type="radio" name="work-types" id="repackaging" value="repackaging" checked>
-              <label class="form__label" for="repackaging">Переупаковка</label>
-              <input class="form__input" type="radio" name="work-types" id="insert" value="insert" checked>
-              <label class="form__label" for="insert">Вложение вкладыша</label>
-              </fieldset>
-              <div class="form__btn-wrapper">
-                <legend class="form__legend">Итого:</legend>
-                <div style="display: flex;">
-                   <p class="form__legend">Наименование</p>
-                   <p class="form__legend">Сумма</p> 
-                </div>
-              </div>
-              <p class="price__text"><span>*Расчёт является примерным.</span> <br>Для точного расчёта оставьте заявку, и наш менеджер свяжется с вами.</br></p>
             </form>
           </div>
+          <p class="calculator__description"><span>*Расчёт является примерным.</span><br>Для точного расчёта оставьте заявку, и наш менеджер свяжется с вами.</p>
         </section>
-        <section class="contact__form">
+        <section class="contact">
           <div class="contact__wrapper container">
             <a class="contact__phone" href="tel:79999999999">+7 (999)999 99 99</a>
             <a class="contact__mail" href="mailto:INFO@FF1.RU">INFO@FF1.RU</a>
@@ -232,7 +237,7 @@
               <input class="form__input" type="tel" name="phone" id="phone" placeholder="Телефон" required>
               <label class="visually-hidden" for="email">E-mail</label>
               <input class="form__input" type="email" name="email" id="email" placeholder="E-mail" required>
-              <input class="form__input" type="checkbox" name="policy" id="policy"required>
+              <input class="form__input" type="checkbox" name="policy" id="policy" required>
               <p class="form__text">Соглашаюсь с
                 <a class="form__link" href="#">Политикой конфиденциальности</a>
               </p> 
@@ -276,22 +281,28 @@
         </ul>
         </section>
         <footer class="footer">
-        <div class="footer__nav-wrapper">
-          <ul class="footer__nav-list footer__nav-list">
-            <li class="site-list__item"><a href="#" class="site-list__link">Услуги</a></li>
-            <li class="site-list__item"><a href="#" class="site-list__link">Тарифы</a></li>
-            <li class="site-list__item"><a href="#" class="site-list__link">Отзывы</a></li>
-            <li class="site-list__item"><a href="#" class="site-list__link">Онлайн калькулятор</a></li>
+        <div class="footer__wrapper">
+          <ul class="footer__list">
+            <li class="footer__item"><a href="#" class="footer__link">Услуги</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Тарифы</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Отзывы</a></li>
+            <li class="footer__item"><a href="#" class="footer__link">Онлайн калькулятор</a></li>
           </ul>
         </div>
-        <ul class="footer-nav__list footer__social-list">
-          <li class="social-list__item"><a href="#" class="social-list__link social-list__link--tg">
-           <span class="visually-hidden">Фулфилмент в Телеграм</span></a></li>
-          <li class="social-list__item"><a href="#" class="social-list__link social-list__link--wa">
-           <span class="visually-hidden">Фулфилмент в WhatsApp</span></a></li>
+        <ul class="footer__social-list social-list">
+          <li class="social-list__item">
+            <a href="#" class="social-list__link social-list__link--tg">
+              <span class="visually-hidden">Фулфилмент в Телеграм</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-list__link social-list__link--wa">
+              <span class="visually-hidden">Фулфилмент в WhatsApp</span>
+            </a>
+          </li>
         </ul>
-        <button class="footer__btn button">Оставить заявку</button>
-          <p class="footer__copyright"><a class="form__link" href="#">Политикой конфиденциальности</a></p>
+        <button class="footer__btn button">Связаться с нами</button>
+          <p class="footer__copyright"><a class="footer__link" href="#">Политикой конфиденциальности</a></p>
         </footer>
       </div>
     </main>
