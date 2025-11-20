@@ -1,0 +1,87 @@
+@use '../common/all-dependencies' as *;
+
+.rate {
+    width: 100%;
+    min-height: 384px;
+    background-image: url("../../images/tariffs.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    color: $color-text-light-f4;
+    background-color: $background-reviews;
+
+    @include desktop-small {
+        min-height: 520px;
+    }
+}
+
+.rate__wrapper {
+    padding: 45px 23px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rate__title {
+    margin-bottom: 20px;
+    font-family: $secondary-font-bolditalic;
+    font-size: rem(36);
+    font-style: italic;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include desktop-small {
+        max-width: 582px;
+        margin-bottom: 37px;
+        font-size: rem(60);
+    }
+}
+
+.rate__text {
+    margin-bottom: 35px;
+    font-size: rem(20);
+    line-height: normal;
+    text-align: center;
+    
+    @include desktop-small {
+        max-width: 492px;
+        margin-bottom: 84px;
+        font-size: rem(30);
+    }
+}
+
+.rate__btn {
+    min-width: 221px;
+    margin-bottom: 62px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-family: $opensans-bold;
+    font-size: rem(20);
+
+    @include desktop-small {
+        min-width: 298px;
+    }
+}
+
+.rate__image {
+    width: 106px;
+    height: 25px;
+    object-fit: contain;
+
+    @include desktop-small {
+        width: 140px;
+        height: 32px;
+    }
+}
+
+.rate__brend-text {
+    font-family: $secondary-font-medium;
+    text-transform: uppercase;
+    font-size: rem(13);
+    line-height: normal;
+
+    @include desktop-small {
+        font-size: rem(17);
+    }
+}
