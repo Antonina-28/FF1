@@ -1,0 +1,120 @@
+@use '../common/all-dependencies' as *;
+
+.services__wrapper {
+    padding: 0 15px 50px;
+}
+
+.services__list {
+    max-width: 372px;
+    margin: 0 auto;
+    margin-bottom: 12px;
+
+    @include tablet {
+        max-width: 728px;
+    }
+
+    @include desktop-small {
+        max-width: 994px;
+    }
+
+    @include desktop {
+        max-width: 95%;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+.services__item {
+    position: relative;
+
+    @include desktop {
+        width: auto !important;
+        max-width: 780px;
+        margin-right: 0 !important;
+    }
+}
+
+.services__item-image {
+    display: block;
+    width: 372px;
+    min-height: 449px;
+    border-radius: 20px;
+
+    @include tablet {
+        width: 354px;
+    }
+
+    @include desktop-small {
+        width: 322px;
+    }
+
+    @include desktop {
+        width: auto !important;
+    }
+}
+
+.services__wrapper-text {
+    position: absolute;
+    bottom: 0;
+    max-width: 344px;
+    min-height: 142px;
+    padding: 16px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $brend-color;
+    color: $color-text-light-f4;
+    border-radius: 0 20px 0 20px;
+    z-index: 2;
+
+    @include tablet {
+        border-radius: 0 20px 20px 20px;
+    }
+
+    @include desktop-small {
+        max-width: 322px;
+    }
+
+    @include desktop {
+        max-width: 590px;
+        min-height: 123px;
+        border-radius: 0 20px 0 0;
+        bottom: 34px;
+    }
+}
+
+.services__item-title {
+    font-family: $secondary-font-bolditalic;
+    font-size: rem(26);
+    line-height: normal;
+    font-style: italic;
+    margin-bottom: 7px;
+
+    @include desktop {
+        font-size: rem(30);
+    }
+}
+
+.services__item-text {
+    @include desktop {
+        font-size: rem(20);
+    }
+}
+
+.services__dots-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    background-color: $background-reviews !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: $brend-color !important;
+}

@@ -24,6 +24,7 @@
     <link rel="preload" href="./src/fonts/FuturaPT-Book.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./src/fonts/OpenSans-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./src/fonts/Goldman-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>ФФ1 самый быстрый фулфилмент под ключ!</title>
   </head>
   <body class="page__body">
@@ -96,34 +97,39 @@
         <section class="services">
           <div class="services__wrapper container">
             <h2 class="visually-hidden">Наши услуги</h2>
-            <ul class="services__list">
-              <li class="services__item">
-                <img src="#" alt="Варианты работы по доставки" class="services__item-image">
-                <h3 class="services__item-title">Доставка по FBO, FBY и FBS</h3>
-                <p class="services__item-text">Мы выходим на площадки маркетплейсов без промедления: FBO, FBY и FBS — всё под контролем нашей команды.</p>
-              </li>
-              <li class="services__item">
-                <img src="#" alt="Самая быстрая доставка" class="services__item-image">
-                <h3 class="services__item-title">Express доставка</h3>
-                <p class="services__item-text">Молниеносные отгрузки на Яндекс Маркет и Ozon. Ускоряем продажи — прирост до 33 % за счёт скорости.</p>
-              </li>
-                  <li class="services__item">
-                    <img src="#" alt="Круглосуточный режим работы" class="services__item-image">
-                    <h3 class="services__item-title">Работаем 24/7</h3>
-                    <p class="services__item-text">Каждый день — новая история. Отгрузки без выходных, потому что скорость не ждёт.</p>
-                  </li>
-              <li class="services__item">
-                <img src="#" alt="Комплексное сопровождение на всех этапах" class="services__item-image">
-                <h3 class="services__item-title">Полный контроль</h3>
-                <p class="services__item-text">Прозрачный документооборот, видеофиксация, остатки и отчётность — полный контроль, как в гоночной команде.</p>
-              </li>
-            </ul>
-            <div class="services__dots-wrapper">
-              <button class="services__dot"></button>
-              <button class="services__dot"></button>
-              <button class="services__dot"></button>
-              <button class="services__dot"></button>
+            <div class="swiper" id="swiper-services">
+              <ul class="services__list swiper-wrapper">
+                <li class="services__item swiper-slide">
+                  <img class="services__item-image" src="./src/images/service-1.jpg" width="780" height="423" alt="Варианты работы по доставки">
+                  <div class="services__wrapper-text">
+                    <h3 class="services__item-title">Доставка по FBO, FBY и FBS</h3>
+                    <p class="services__item-text">Мы выходим на площадки маркетплейсов без промедления: FBO, FBY и FBS — всё под контролем нашей команды.</p>
+                  </div>
+                </li>
+                <li class="services__item swiper-slide">
+                  <img class="services__item-image" src="./src/images/service-2.jpg" width="780" height="423" alt="Самая быстрая доставка">
+                  <div class="services__wrapper-text">
+                    <h3 class="services__item-title">Express доставка</h3>
+                    <p class="services__item-text">Молниеносные отгрузки на Яндекс Маркет и Ozon. Ускоряем продажи — прирост до 33 % за счёт скорости.</p>
+                  </div>
+                </li>
+                    <li class="services__item swiper-slide">
+                      <img class="services__item-image" src="./src/images/service-3.jpg" width="780" height="423" alt="Круглосуточный режим работы">
+                      <div class="services__wrapper-text">
+                        <h3 class="services__item-title">Работаем 24/7</h3>
+                        <p class="services__item-text">Каждый день — новая история. Отгрузки без выходных, потому что скорость не ждёт.</p>
+                      </div>
+                    </li>
+                <li class="services__item swiper-slide">
+                  <img class="services__item-image" src="./src/images/service-4.jpg" width="780" height="423" alt="Комплексное сопровождение на всех этапах">
+                  <div class="services__wrapper-text">
+                    <h3 class="services__item-title">Полный контроль</h3>
+                    <p class="services__item-text">Прозрачный документооборот, видеофиксация, остатки и отчётность — полный контроль, как в гоночной команде.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
+            <div class="services__dots-wrapper .swiper-pagination"></div>
           </div>
         </section>
         <section class="price">
@@ -289,5 +295,6 @@
         </div>
       </main>
     <script type="module" src="/src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
