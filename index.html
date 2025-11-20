@@ -190,8 +190,103 @@
               <input class="form__input" type="radio" name="marketplace" id="yandex-market" value="yandex-market">
               <label class="form__label" for="yandex-market">Яндекс Маркет</label>
               </fieldset>
+              <fieldset class="form__fieldset">
+              <legend class="form__legend">Выберите работы:</legend>
+              <input class="form__input" type="radio" name="work-types" id="acceptance" value="acceptance" checked>
+              <label class="form__label" for="acceptance">Маркировка товара</label>
+              <input class="form__input" type="radio" name="work-types" id="defect" value="defect" checked>
+              <label class="form__label" for="defect">Проверка на брак</label>
+              <input class="form__input" type="radio" name="work-types" id="tag" value="tag" checked>
+              <label class="form__label" for="tag">Убрать бирку</label>
+              <input class="form__input" type="radio" name="work-types" id="repackaging" value="repackaging" checked>
+              <label class="form__label" for="repackaging">Переупаковка</label>
+              <input class="form__input" type="radio" name="work-types" id="insert" value="insert" checked>
+              <label class="form__label" for="insert">Вложение вкладыша</label>
+              </fieldset>
+              <div class="form__btn-wrapper">
+                <legend class="form__legend">Итого:</legend>
+                <div style="display: flex;">
+                   <p class="form__legend">Наименование</p>
+                   <p class="form__legend">Сумма</p> 
+                </div>
+              </div>
+              <p class="price__text"><span>*Расчёт является примерным.</span> <br>Для точного расчёта оставьте заявку, и наш менеджер свяжется с вами.</br></p>
+            </form>
           </div>
         </section>
+        <section class="contact__form">
+          <div class="contact__wrapper container">
+            <a class="contact__phone" href="tel:79999999999">+7 (999)999 99 99</a>
+            <a class="contact__mail" href="mailto:INFO@FF1.RU">INFO@FF1.RU</a>
+            <h2 class="contact__title">Ваш билет в мир быстрой логистики</h2>
+            <form class="contact__form form" action="#" method="post">
+              <label class="visually-hidden" for="name">Ваше имя</label>
+              <input class="form__input" type="text" name="name" id="name" placeholder="Имя" required>
+              <label class="visually-hidden" for="phone">Телефон</label>
+              <input class="form__input" type="tel" name="phone" id="phone" placeholder="Телефон" required>
+              <label class="visually-hidden" for="email">E-mail</label>
+              <input class="form__input" type="email" name="email" id="email" placeholder="E-mail" required>
+              <input class="form__input" type="checkbox" name="policy" id="policy"required>
+              <p class="form__text">Соглашаюсь с
+                <a class="form__link" href="#">Политикой конфиденциальности</a>
+              </p> 
+              <button class="contact__btn button" type="submit">Старт</button>
+            </form>
+          </div>
+        </section>
+      <section class="reviews">
+        <h2 class="reviews__title">Что говорят о нас клиенты</h2>
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <span class="reviews__item-quote">Отзыв 1</span>
+            <img src="#" alt="Фото клиента" class="reviews__item-image">
+            <p class="reviews__item-name">Руководитель интернет-магазина “Fun hourse”</p>
+            <p class="reviews__item-text">Работаем с ФФ1 уже больше полугода. Очень удобно, что все процессы прозрачные — видно остатки, отчётность приходит вовремя, документы в порядке. Отгрузки на маркетплейсы идут стабильно, без задержек.Отдельно хочу отметить скорость реагирования менеджеров: любые вопросы решаются в тот же день, не приходится напоминать. Мы пробовали работать с другими фулфилментами, но здесь реально чувствуется системность и внимание к клиенту. Сейчас полностью передали им логистику — освободилось много времени, можем спокойно заниматься развитием продаж.</p>
+          </li>
+          <li class="reviews__item">
+            <span class="reviews__item-quote">Отзыв 2</span>
+            <img src="#" alt="Фото клиента" class="reviews__item-image">
+            <p class="reviews__item-name">#</p>
+            <p class="reviews__item-text">#</p>
+          </li>
+          <li class="reviews__item">
+            <span class="reviews__item-quote">Отзыв 3</span>
+            <img src="#" alt="Фото клиента" class="reviews__item-image">
+            <p class="reviews__item-name">#</p>
+            <p class="reviews__item-text">#</p>
+          </li>
+          <li class="reviews__item">
+            <span class="reviews__item-quote">Отзыв 4</span>
+            <img src="#" alt="Фото клиента" class="reviews__item-image">
+            <p class="reviews__item-name">#</p>
+            <p class="reviews__item-text">#</p>
+          </li>
+          <li class="reviews__item">
+            <span class="reviews__item-quote">Отзыв 5</span>
+            <img src="#" alt="Фото клиента" class="reviews__item-image">
+            <p class="reviews__item-name">#</p>
+            <p class="reviews__item-text">#</p>
+          </li>
+        </ul>
+      </section>
+      <footer class="footer">
+        <div class="footer__nav-wrapper">
+          <ul class="footer__nav-list footer__nav-list">
+            <li class="site-list__item"><a href="#" class="site-list__link">Услуги</a></li>
+            <li class="site-list__item"><a href="#" class="site-list__link">Тарифы</a></li>
+            <li class="site-list__item"><a href="#" class="site-list__link">Отзывы</a></li>
+            <li class="site-list__item"><a href="#" class="site-list__link">Онлайн калькулятор</a></li>
+          </ul>
+        </div>
+        <ul class="footer-nav__list footer__social-list">
+          <li class="social-list__item"><a href="#" class="social-list__link social-list__link--tg">
+           <span class="visually-hidden">Фулфилмент в Телеграм</span></a></li>
+          <li class="social-list__item"><a href="#" class="social-list__link social-list__link--wa">
+           <span class="visually-hidden">Фулфилмент в WhatsApp</span></a></li>
+        </ul>
+        <button class="footer__btn button">Оставить заявку</button>
+          <p class="footer__copyright"><a class="form__link" href="#">Политикой конфиденциальности</a></p>
+        </div>
       </main>
     <script type="module" src="/src/js/main.js"></script>
   </body>
