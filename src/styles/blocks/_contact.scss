@@ -1,0 +1,56 @@
+@use '../common/all-dependencies' as *;
+
+.contact {
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    background-color: $color-text-light-f4;
+    color: $white;
+}
+
+.contact__wrapper {
+    max-width: 372px;
+    min-height: 960px;
+    padding: 115px 28px 64px 37px;
+    background-image: url("../../images/form-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.contact__info {
+    position: relative;
+    max-width: 212px;
+    margin-bottom: 15px;
+    display: block;
+    padding: 5px 64px 5px 10px;
+    font-family: $secondary-font-btMediumItalic;
+    font-size: rem(15);
+    line-height: normal;
+    font-style: italic;
+    color: $white;
+    text-decoration: none;
+    border: 2px solid $color-text-light-f4;
+    border-radius: 20px;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        right: 8px;
+        width: 45px;
+        height: 15px;
+        background-image: url("../../images/icons/streak-4.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.contact__info--mail {
+    &::after {
+        width: 66px;
+        background-image: url("../../images/icons/streak-6.svg");
+    }
+
+}

@@ -18,7 +18,8 @@
 
     @include desktop-small {
         background-image: url("../../images/hero-desktop.jpg");        
-        height: 702px;       
+        height: 702px;  
+        max-width: 1580px;     
     }
 }
 
