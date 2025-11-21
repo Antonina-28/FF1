@@ -142,7 +142,7 @@
         </section>
         <section class="rate">
           <div class="rate__wrapper">
-            <h2 class="rate__title">Гибкие тарифы под ваши задачи</h2>
+            <h2 class="rate__title">Гибкие тарифы<br> под ваши задачи</h2>
             <p class="rate__text">Рассчитаем оптимальное решение<br> по маршрутам, срокам и объёмам.</p>
             <button class="rate__btn button" type="button">Оставить заявку</button>
             <img class="rate__image" src="./src/images/icons/logo.svg" width="140" height="33" alt="Логотип ФФ1" >
@@ -151,124 +151,126 @@
         </section>
         <section class="calculator">
           <div class="calculator__wrapper">
-            <h2 class="calculator__title">Не жди сигнала — <span>рассчитай<br> прямо сейчас!</span></h2>
-            <p class="calculator__text">Рассчитай стоимость<br> фулфилмента за секунды</p>
-            <div class="calculator__btn-wrapper">
-              <form class="calculator__form form" action="#" method="get">
-                <div class="calculator__container">
-                  <fieldset class="form__fieldset"> 
-                    <legend class="form__legend">Выберите схему работы:</legend>
-                    <div class="form__labels">
-                      <label class="form__label" for="fbo">FBO
-                      <input class="form__input" type="radio" name="work-scheme" id="fbo" value="fbo">
-                      </label>
-                      <label class="form__label" for="fbs">FBS
-                      <input class="form__input" type="radio" name="work-scheme" id="fbs" value="fbs" checked> 
-                      </label>
-                    </div>
-                  </fieldset>
-                  <fieldset class="form__fieldset">
-                    <legend class="form__legend">Забор товара в черте города:</legend>
-                    <div class="form__labels">
-                      <label class="form__label" for="pickup-not-required">Забор не требуется
-                      <input class="form__input" type="radio" name="pickup" id="pickup-not-required" value="not-required">
-                      </label>
-                      <label class="form__label" for="company">Транспортная компания
-                      <input class="form__input" type="radio" name="pickup" id="company" value="company">
-                      </label>
-                      <label class="form__label" for="cargo">Карго
-                      <input class="form__input" type="radio" name="pickup" id="cargo" value="cargo">
-                      </label>
-                    </div>
-                  </fieldset>
-                  <fieldset class="form__fieldset">
-                    <legend class="form__legend">Количество товаров:</legend>
-                    <div class="form__wrapper">
-                      <span class="form__legend">Товаров <span class="form__legend">0</span></span>
-                    </div>
-                    <input class="form__range" type="range" name="quantity-of-goods" id="quantity-of-goods" min="0" max="10000" value="0" step="1">
-                    <div class="form__range-labels">
-                      <span class="form__range-min form__legend">0 товаров</span>
-                      <span class="form__range-max form__legend">10000</span>
-                    </div>
-                  </fieldset>
-                  <fieldset class="form__fieldset">
-                    <legend class="form__legend">Укажите примерное кол-во коробов (60х40х40):</legend>
-                    <div class="form__wrapper">
-                      <span class="form__legend">Коробов <span class="form__legend">0</span></span>
-                    </div>
-                    <input class="form__range" type="range" name="quantity-of-boxes" id="quantity-of-boxes" min="0" max="10000" value="0" step="1">
-                    <div class="form__range-labels">
-                      <span class="form__range-min form__legend">0 коробов</span>
-                      <span class="form__range-max form__legend">10000</span>
-                    </div>
-                  </fieldset>
-                  <fieldset class="form__fieldset">
-                    <legend class="form__legend">Маркетплейс:</legend>
-                    <div class="form__labels">
-                      <label class="form__label" for="wildberries">Wildberries
-                      <input class="form__input" type="radio" name="marketplace" id="wildberries" value="wildberries" checked>
-                      </label>
-                      <label class="form__label" for="ozon">Ozon
-                      <input class="form__input" type="radio" name="marketplace" id="ozon" value="ozon">
-                      </label>
-                      <label class="form__label" for="yandex-market">Яндекс Маркет
-                      <input class="form__input" type="radio" name="marketplace" id="yandex-market" value="yandex-market">
-                      </label>
-                    </div>
-                  </fieldset>
-                  <fieldset class="form__fieldset">
-                    <legend class="form__legend">Выберите работы:</legend>
-                    <div class="form__labels">
-                      <label class="form__label" for="acceptance">Маркировка товара
-                      <input class="form__input" type="radio" name="work-types" id="acceptance" value="acceptance" checked>
-                      </label>
-                      <label class="form__label" for="defect">Проверка на брак
-                      <input class="form__input" type="radio" name="work-types" id="defect" value="defect" checked>
-                      </label>
-                      <label class="form__label" for="tag">Убрать бирку
-                      <input class="form__input" type="radio" name="work-types" id="tag" value="tag" checked>
-                      </label>
-                      <label class="form__label" for="repackaging">Переупаковка
-                      <input class="form__input" type="radio" name="work-types" id="repackaging" value="repackaging" checked>
-                      </label>
-                      <label class="form__label" for="insert">Вложение вкладыша
-                      <input class="form__input" type="radio" name="work-types" id="insert" value="insert" checked>
-                      </label>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="form__total total">
-                  <h3 class="total__title">ИТОГ:</h3>
-                  <dl class="total__list">
-                    <div class="total__item">
-                      <dt class="total__name">Наименование</dt>
-                      <dd class="total__value">Сумма</dd>
-                    </div>
-                  </dl>
-                </div>
-              </form>
+            <div class="calculator__wrapper-form">
+              <h2 class="calculator__title">Не жди сигнала — <span><br>рассчитай прямо&nbsp;сейчас!</span></h2>
+              <p class="calculator__text">Рассчитай стоимость<br> фулфилмента за секунды</p>
+              <div class="calculator__container-form">
+                <form class="calculator__form form" action="#" method="get">
+                  <div class="calculator__container">
+                    <fieldset class="form__fieldset form__fieldset-scheme"> 
+                      <legend class="form__legend">Выберите схему работы:</legend>
+                      <div class="form__labels">
+                        <label class="form__label" for="fbo">FBO
+                        <input class="form__input" type="radio" name="work-scheme" id="fbo" value="fbo">
+                        </label>
+                        <label class="form__label" for="fbs">FBS
+                        <input class="form__input" type="radio" name="work-scheme" id="fbs" value="fbs" checked> 
+                        </label>
+                      </div>
+                    </fieldset>
+                    <fieldset class="form__fieldset form__fieldset-pickup">
+                      <legend class="form__legend">Забор товара в черте города:</legend>
+                      <div class="form__labels">
+                        <label class="form__label" for="pickup-not-required">Забор не требуется
+                        <input class="form__input" type="radio" name="pickup" id="pickup-not-required" value="not-required">
+                        </label>
+                        <label class="form__label" for="company">Транспортная компания
+                        <input class="form__input" type="radio" name="pickup" id="company" value="company">
+                        </label>
+                        <label class="form__label" for="cargo">Карго
+                        <input class="form__input" type="radio" name="pickup" id="cargo" value="cargo">
+                        </label>
+                      </div>
+                    </fieldset>
+                    <fieldset class="form__fieldset form__fieldset-quantity">
+                      <legend class="form__legend">Количество товаров:</legend>
+                      <div class="form__wrapper form__wrapper-quantity">
+                        <span class="form__legend">Товаров <span class="form__legend">0</span></span>
+                      </div>
+                      <input class="form__range" type="range" name="quantity-of-goods" id="quantity-of-goods" min="0" max="10000" value="0" step="1">
+                      <div class="form__range-labels">
+                        <span class="form__range-min form__legend">0 товаров</span>
+                        <span class="form__range-max form__legend">10000</span>
+                      </div>
+                    </fieldset>
+                    <fieldset class="form__fieldset form__fieldset-boxes">
+                      <legend class="form__legend">Укажите примерное кол-во коробов (60х40х40):</legend>
+                      <div class="form__wrapper form__wrapper-boxes">
+                        <span class="form__legend">Коробов <span class="form__legend">0</span></span>
+                      </div>
+                      <input class="form__range" type="range" name="quantity-of-boxes" id="quantity-of-boxes" min="0" max="10000" value="0" step="1">
+                      <div class="form__range-labels">
+                        <span class="form__range-min form__legend">0 коробов</span>
+                        <span class="form__range-max form__legend">10000</span>
+                      </div>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                      <legend class="form__legend">Маркетплейс:</legend>
+                      <div class="form__labels">
+                        <label class="form__label" for="ozon">Ozon
+                        <input class="form__input" type="radio" name="marketplace" id="ozon" value="ozon">
+                        </label>
+                        <label class="form__label" for="wildberries">Wildberries
+                        <input class="form__input" type="radio" name="marketplace" id="wildberries" value="wildberries" checked>
+                        </label>
+                        <label class="form__label" for="yandex-market">Яндекс Маркет
+                        <input class="form__input" type="radio" name="marketplace" id="yandex-market" value="yandex-market">
+                        </label>
+                      </div>
+                    </fieldset>
+                    <fieldset class="form__fieldset">
+                      <legend class="form__legend">Выберите работы:</legend>
+                      <div class="form__labels">
+                        <label class="form__label" for="acceptance">Маркировка товара
+                        <input class="form__input" type="radio" name="work-types" id="acceptance" value="acceptance">
+                        </label>
+                        <label class="form__label" for="defect">Проверка на брак
+                        <input class="form__input" type="radio" name="work-types" id="defect" value="defect" checked>
+                        </label>
+                        <label class="form__label" for="tag">Убрать бирку
+                        <input class="form__input" type="radio" name="work-types" id="tag" value="tag">
+                        </label>
+                        <label class="form__label" for="repackaging">Переупаковка
+                        <input class="form__input" type="radio" name="work-types" id="repackaging" value="repackaging">
+                        </label>
+                        <label class="form__label" for="insert">Вложение вкладыша
+                        <input class="form__input" type="radio" name="work-types" id="insert" value="insert">
+                        </label>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="form__total total">
+                    <h3 class="total__title">ИТОГ:</h3>
+                    <dl class="total__list">
+                      <div class="total__item">
+                        <dt class="total__name">Наименование</dt>
+                        <dd class="total__value">Сумма</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </form>
+              </div>
             </div>
-            <p class="calculator__description"><span>*Расчёт является примерным.</span><br>Для точного расчёта оставьте заявку, и наш менеджер свяжется с вами.</p>
           </div>
+          <p class="calculator__description"><span>*Расчёт является примерным.</span><br>Для точного расчёта оставьте заявку, и наш менеджер свяжется с вами.</p>
         </section>
         <section class="contact">
           <div class="contact__wrapper container">
-            <a class="contact__phone" href="tel:79999999999">+7 (999)999 99 99</a>
-            <a class="contact__mail" href="mailto:INFO@FF1.RU">INFO@FF1.RU</a>
+            <a class="contact__info contact__info--phone" href="tel:79999999999">+7 (999)999 99 99</a>
+            <a class="contact__info contact__info--mail" href="mailto:INFO@FF1.RU">INFO@FF1.RU</a>
             <h2 class="contact__title">Ваш билет в мир быстрой логистики</h2>
-            <form class="contact__form form" action="#" method="post">
-              <label class="visually-hidden" for="name">Ваше имя</label>
-              <input class="form__input" type="text" name="name" id="name" placeholder="Имя" required>
-              <label class="visually-hidden" for="phone">Телефон</label>
-              <input class="form__input" type="tel" name="phone" id="phone" placeholder="Телефон" required>
-              <label class="visually-hidden" for="email">E-mail</label>
-              <input class="form__input" type="email" name="email" id="email" placeholder="E-mail" required>
-              <input class="form__input" type="checkbox" name="policy" id="policy" required>
-              <p class="form__text">Соглашаюсь с
-                <a class="form__link" href="#">Политикой конфиденциальности</a>
+            <form class="contact__form form-contact" action="#" method="post">
+              <label class="form-contact__label" for="name">Ваше имя</label>
+              <input class="form-contact__input" type="text" name="name" id="name" placeholder="Имя" required>
+              <label class="form-contact__label" for="phone">Телефон</label>
+              <input class="form-contact__input" type="tel" name="phone" id="phone" placeholder="Телефон" required>
+              <label class="form-contact__label" for="email">E-mail</label>
+              <input class="form-contact__input" type="email" name="email" id="email" placeholder="E-mail" required>
+              <input class="form-contact__checkbox" type="checkbox" name="policy" id="policy" required>
+              <p class="form-contact__text">Соглашаюсь с
+                <a class="form-contact__link" href="#">Политикой конфиденциальности</a>
               </p> 
-              <button class="contact__btn button" type="submit">Старт</button>
+              <button class="form-contact__btn button" type="submit">Старт</button>
             </form>
           </div>
         </section>

@@ -36,6 +36,10 @@
         margin-bottom: 37px;
         font-size: rem(60);
     }
+
+    @include desktop {
+        max-width: 1000px;
+    }
 }
 
 .rate__text {
@@ -48,6 +52,10 @@
         max-width: 492px;
         margin-bottom: 84px;
         font-size: rem(30);
+    }
+
+    @include desktop {
+        max-width: 1000px;
     }
 }
 
