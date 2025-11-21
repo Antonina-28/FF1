@@ -48,9 +48,17 @@
 }
 
 .contact__info--mail {
+    margin-bottom: 200px;
     &::after {
         width: 66px;
         background-image: url("../../images/icons/streak-6.svg");
     }
+}
 
+.contact__title {
+    padding: 52px 0 30px;
+    font-family: $secondary-font-bolditalic;
+    font-size: rem(26);
+    line-height: normal;
+    text-transform: uppercase;
 }
