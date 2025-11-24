@@ -1,6 +1,7 @@
 @use '../common/all-dependencies' as *;
 
 .contact {
+    margin-bottom: 50px;
     padding: 0 15px;
     display: flex;
     justify-content: center;
@@ -9,12 +10,44 @@
 }
 
 .contact__wrapper {
+    position: relative;
     max-width: 372px;
     min-height: 960px;
     padding: 115px 28px 64px 37px;
     background-image: url("../../images/form-mobile.png");
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
+
+    @include desktop-small {
+        padding: 73px 61px 39px 97px;
+        max-width: 994px;
+        min-height: min-content;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background-image: url("../../images/form-desktop.png");
+        background-size: contain;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 161px;
+        height: 38px;
+        bottom: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url("../../images/icons/logo.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        @include desktop-small {
+            bottom: auto;
+            top: 73px;
+            left: 18%;
+            transform: none
+        }
+    }
 }
 
 .contact__info {
@@ -45,12 +78,38 @@
         background-size: cover;
         background-position: center;
     }
+
+    @include desktop-small {
+        margin-bottom: 0;
+        align-self: flex-end;
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+    }
 }
 
 .contact__info--mail {
+    margin-bottom: 200px;
     &::after {
         width: 66px;
         background-image: url("../../images/icons/streak-6.svg");
     }
 
+    @include desktop-small {
+        margin-bottom: 0;
+        grid-column: 2 / 3;
+    }
+}
+
+.contact__title {
+    padding: 52px 0 30px;
+    font-family: $secondary-font-bolditalic;
+    font-size: rem(26);
+    line-height: normal;
+    text-transform: uppercase;
+
+    @include desktop-small {
+        margin-bottom: 20px;
+        padding: 0;
+        grid-column: 3 / 5;
+    }
 }
