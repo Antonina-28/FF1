@@ -7,6 +7,10 @@
     justify-content: center;
     background-color: $color-text-light-f4;
     color: $white;
+
+    @include desktop {
+        margin-bottom: 100px;
+    }
 }
 
 .contact__wrapper {
@@ -28,6 +32,13 @@
         background-size: contain;
     }
 
+    @include desktop {
+        max-width: 1580px;
+        min-height: 589px;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(2, min-content);
+    }
+
     &::after {
         position: absolute;
         content: "";
@@ -46,6 +57,13 @@
             top: 73px;
             left: 18%;
             transform: none
+        }
+
+        @include desktop {
+            width: 256px;
+            height: 60px;
+            top: 95px;
+            left: 16%;
         }
     }
 }
@@ -84,6 +102,16 @@
         align-self: flex-end;
         grid-row: 2 / 3;
         grid-column: 1 / 2;
+        max-width: 180px;
+        font-size: rem(12);
+    }
+
+    @include desktop {
+        grid-column: 1 / 4;
+        min-width: 212px;
+        font-size: rem(15);
+        justify-self: flex-end;
+        margin-right: 75px;
     }
 }
 
@@ -96,7 +124,14 @@
 
     @include desktop-small {
         margin-bottom: 0;
+        margin-left: -20px;
         grid-column: 2 / 3;
+    }
+
+    @include desktop {
+        grid-column: 3 / 6;
+        margin-left: 0;
+        margin-right: 75px;
     }
 }
 
@@ -111,5 +146,12 @@
         margin-bottom: 20px;
         padding: 0;
         grid-column: 3 / 5;
+    }
+
+    @include desktop {
+        margin-bottom: 36px;
+        padding-top: 30px;
+        grid-column: 6 / 10;
+        font-size: rem(40);
     }
 }

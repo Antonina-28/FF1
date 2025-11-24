@@ -9,6 +9,10 @@
         grid-column: 3 / 5;
         gap: 25px;
     }
+
+    @include desktop {
+        grid-column: 6 / 10;
+    }
 }
 
 .form-contact__input {
@@ -17,6 +21,10 @@
     border: none;
     border-bottom: 1px solid $brend-color;
 
+    @include desktop {
+        font-size: rem(25);
+    }
+
     &::placeholder {
         font-family: $secondary-font-bolditalic;
         font-size: rem(20);
@@ -24,6 +32,12 @@
         font-style: italic;
         text-transform: uppercase;
         color: $white;
+
+        @include desktop {
+            font-size: rem(25);
+            padding-left: 5px;
+            padding-bottom: 5px;
+        }
     }
 }
 
@@ -38,6 +52,10 @@
     @include desktop-small {
         row-gap: 0;
     }
+
+    @include desktop {
+        row-gap: 20px;
+    }
 }
 
 .form-contact__checkbox {
@@ -45,6 +63,17 @@
     width: 12px;
     height: 12px;
     border: 1px solid $brend-color;
+
+    @include desktop {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.form-contact__text {
+    @include desktop {
+        font-size: rem(16);
+    }
 }
 
 .form-contact__link {
@@ -68,4 +97,12 @@
     text-transform: uppercase;
     text-align: right;
     color: $brend-color;
+
+    @include desktop {
+        width: 240px;
+        height: 55px;
+        font-size: rem(34);
+        justify-self: flex-start;
+        grid-column: 1 / 3;
+    }
 }

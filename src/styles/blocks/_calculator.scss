@@ -104,6 +104,10 @@
         grid-template-columns: repeat(2, 1fr);
         column-gap: 20px;
     }
+
+    @include desktop {
+        padding: 50px 115px;
+    }
 }
 
 .calculator__description {
@@ -116,5 +120,6 @@
         max-width: 1324px;
         margin: 0 auto;
         margin-bottom: 110px;
+        padding-left: 280px;
     }
 }
