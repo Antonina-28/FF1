@@ -1,6 +1,8 @@
 @use '../common/all-dependencies' as *;
 
 .reviews {
+    max-width: 1580px;
+    margin: 0 auto;
     padding: 0 15px;
 }
 
@@ -11,15 +13,36 @@
     line-height: normal;
     font-style: italic;
     text-transform: uppercase;
+
+    @include desktop {
+        margin-bottom: 135px;
+        font-size: rem(70);
+        text-align: center;
+    }
+}
+
+.reviews__container {
+    display: none;
+
+    @include desktop {
+        display: block;
+    }
 }
 
 .reviews__navigation {
     margin-right: 10px;
     text-align: right;
     margin-bottom: -34px;
+    z-index: 100;
+    pointer-events: none;
+
+    @include desktop {
+        display: none;
+    }
 }
 
 .reviews__nav-button {
+    position: relative;
     width: 33px;
     height: 33px;
     background-color: $brend-color;
@@ -29,7 +52,8 @@
     background-size: 8px 13px;
     border-radius: 50%;
     border: none;
-    cursor: pointer;
+    pointer-events: all;
+    z-index: 101;
 }
 
 .reviews__nav-button--prev {
@@ -38,10 +62,6 @@
 
 .reviews__nav-button--next {
     transform: rotate(-180deg);
-}
-
-.reviews__list {
-    
 }
 
 .reviews__item-wrapper {
@@ -72,6 +92,10 @@
         background-size: cover;
         right: -15px;
         bottom: 0;
+
+        @include tablet {
+            right: -14px;
+        }
     }
 }
 

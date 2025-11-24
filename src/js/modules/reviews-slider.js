@@ -1,5 +1,5 @@
 import 'swiper/css';
-import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 
@@ -9,11 +9,14 @@ const options = {
   spaceBetween: 20,
   loop: true,
   slidesPerGroup: 1,
+
   modules: [Navigation],
+
   navigation: {
         prevEl: '.reviews__nav-button--prev',
         nextEl: '.reviews__nav-button--next',
     },
+
   breakpoints: {
     320: {
       initialSlide: 1,
@@ -31,11 +34,6 @@ const options = {
     1440: {
         slidesPerView: 4,
         spaceBetween: 30,
-        enabled: false,
-        loop: false,
-        pagination: {
-            el: '',
-        }
     },
   },
 };

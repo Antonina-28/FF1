@@ -17,6 +17,10 @@
         bottom: 65px;
         width: 380px;
     }
+
+    @include desktop {
+        right: 70px;
+    }
 }
 
 .total__title {
