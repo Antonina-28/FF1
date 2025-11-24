@@ -3,6 +3,7 @@ import '../styles/styles.scss'
 import { ResponsiveRem } from './modules/responsiveRem';
 import burgerMenu from './modules/burger-menu';
 import { servicesSlider } from './modules/services-slider';
+import { reviewsSlider } from './modules/reviews-slider';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -20,4 +21,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     burgerMenu();
     servicesSlider();
+    reviewsSlider();
 });

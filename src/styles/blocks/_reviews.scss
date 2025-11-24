@@ -1,0 +1,97 @@
+@use '../common/all-dependencies' as *;
+
+.reviews {
+    padding: 0 15px;
+}
+
+.reviews__title {
+    margin-bottom: 50px;
+    font-family: $secondary-font-bolditalic;
+    font-size: rem(36);
+    line-height: normal;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.reviews__navigation {
+    margin-right: 10px;
+    text-align: right;
+    margin-bottom: -34px;
+}
+
+.reviews__nav-button {
+    width: 33px;
+    height: 33px;
+    background-color: $brend-color;
+    background-image: url("../../images/icons/head-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 13px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.reviews__nav-button--prev {
+    margin-right: 5px;
+}
+
+.reviews__nav-button--next {
+    transform: rotate(-180deg);
+}
+
+.reviews__list {
+    
+}
+
+.reviews__item-wrapper {
+    padding: 33px 22px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $background-header;
+    color: $color-text-light-f4;
+    border-radius: 0 20px 20px 20px;
+}
+
+.reviews__item-quote {
+    position: relative;
+    width: 175px;
+    padding: 16px 50px 0;
+    font-family: $secondary-font-heavy;
+    background-color: $background-header;
+    color: $brend-color;
+    border-radius: 20px 20px 0 0;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 15px;
+        background-image: url("../../images/icons/reviews-block.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        right: -15px;
+        bottom: 0;
+    }
+}
+
+.reviews__item-image {
+    border-radius: 50%;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.reviews__item-name {
+    font-size: rem(14);
+    line-height: normal;
+    align-self: center;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+
+.reviews__item-text {
+    font-size: rem(18);
+    margin-top: 26px;
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+}
