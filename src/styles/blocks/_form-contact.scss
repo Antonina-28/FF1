@@ -1,0 +1,71 @@
+@use '../common/all-dependencies' as *;
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+
+    @include desktop-small {
+        grid-column: 3 / 5;
+        gap: 25px;
+    }
+}
+
+.form-contact__input {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $brend-color;
+
+    &::placeholder {
+        font-family: $secondary-font-bolditalic;
+        font-size: rem(20);
+        line-height: normal;
+        font-style: italic;
+        text-transform: uppercase;
+        color: $white;
+    }
+}
+
+.form-contact__group {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    row-gap: 33px;
+    font-family: $secondary-font-btMediumItalic;
+    font-size: rem(12);
+
+    @include desktop-small {
+        row-gap: 0;
+    }
+}
+
+.form-contact__checkbox {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $brend-color;
+}
+
+.form-contact__link {
+    color: $white;
+}
+
+.form-contact__btn {
+    grid-column: 2 / 3;
+    justify-self: flex-end;
+    width: 161px;
+    height: 37px;
+    padding-right: 24px;
+    border: none;
+    background-color: transparent;
+    background-image: url("../../images/icons/start.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: $secondary-font-bolditalic;
+    font-size: rem(20);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: right;
+    color: $brend-color;
+}

@@ -260,17 +260,16 @@
             <a class="contact__info contact__info--mail" href="mailto:INFO@FF1.RU">INFO@FF1.RU</a>
             <h2 class="contact__title">Ваш билет в мир быстрой логистики</h2>
             <form class="contact__form form-contact" action="#" method="post">
-              <label class="form-contact__label" for="name">Ваше имя</label>
               <input class="form-contact__input" type="text" name="name" id="name" placeholder="Имя" required>
-              <label class="form-contact__label" for="phone">Телефон</label>
               <input class="form-contact__input" type="tel" name="phone" id="phone" placeholder="Телефон" required>
-              <label class="form-contact__label" for="email">E-mail</label>
               <input class="form-contact__input" type="email" name="email" id="email" placeholder="E-mail" required>
-              <input class="form-contact__checkbox" type="checkbox" name="policy" id="policy" required>
-              <p class="form-contact__text">Соглашаюсь с
-                <a class="form-contact__link" href="#">Политикой конфиденциальности</a>
-              </p> 
-              <button class="form-contact__btn button" type="submit">Старт</button>
+              <div class="form-contact__group">
+                <input class="form-contact__checkbox" type="checkbox" name="policy" id="policy" required>
+                <p class="form-contact__text">Соглашаюсь с
+                  <a class="form-contact__link" href="#">Политикой конфиденциальности</a>
+                </p>
+                <button class="form-contact__btn" type="submit">Старт</button>
+              </div>
             </form>
           </div>
         </section>
