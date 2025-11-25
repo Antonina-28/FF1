@@ -4,6 +4,7 @@ import { ResponsiveRem } from './modules/responsiveRem';
 import burgerMenu from './modules/burger-menu';
 import { servicesSlider } from './modules/services-slider';
 import { reviewsSlider } from './modules/reviews-slider';
+import { handleReviewTabs } from './modules/review-tabs';
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -22,4 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
     burgerMenu();
     servicesSlider();
     reviewsSlider();
+
+    // Вызывать только на десктопе
+    if (window.innerWidth >= 1440) {
+        handleReviewTabs();
+    }
 });

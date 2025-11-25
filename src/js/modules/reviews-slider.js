@@ -32,12 +32,17 @@ const options = {
         spaceBetween: 10,
     },
     1440: {
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 30,
+        enabled: false,
+        loop: false,
     },
   },
 };
 
 export function reviewsSlider() {
-    new Swiper('#swiper-reviews', options);
+  const screenWidth = window.innerWidth;
+    if (screenWidth < 1440) {
+      new Swiper('#swiper-reviews', options);
+    }
 }
