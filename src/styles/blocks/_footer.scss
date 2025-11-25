@@ -2,11 +2,13 @@
 
 .footer {
     position: relative;
-    padding-top: 81px;
-    background-image: url("../../images/icons/footer-background.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    padding: 81px 15px 10px;
+
+    @include desktop {
+        min-height: 456px;
+        padding-top: 105px;
+        padding-bottom: 50px;
+    }
 
     &::after {
         position: absolute;
@@ -22,14 +24,55 @@
         transform: translateX(-50%);
         z-index: -1;
         filter: blur(4px);
+
+        @include desktop {
+            width: 1066px;
+            height: 206px;
+            top: auto;
+            bottom: 92px;
+        }
     }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(188, 188, 188, 0.46) 0%, rgba(0, 0, 0, 0.46) 100%);
+        border-radius: 30px 30px 0 0;
+    
+        /* Трапеция: УЗКО вверху, ШИРОКО внизу */
+        clip-path: polygon(
+            20% 0%,    /* Левый верхний угол (узко) */
+            80% 0%,    /* Правый верхний угол (узко) */
+            117% 100%, /* Правый нижний угол (широко) */
+            -17% 100%    /* Левый нижний угол (широко) */
+        );
+    
+        z-index: 1;
+   }
 }
 
 .footer__wrapper {
-    padding: 0 15px 10px;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 10;
+
+    @include desktop-small {
+        max-width: 1046px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    @include desktop {
+        justify-content: space-between;
+    }
 }
 
 .footer__list {
@@ -40,23 +83,70 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
+
+    @include desktop-small {
+        margin-bottom: 0;
+        flex-direction: row;
+        font-size: rem(20);
+        gap: 65px;
+    }
 }
 
 .footer__link {
     color: $color-text;
-text-decoration: none;
+    text-decoration: none;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: $brend-color;
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
 }
 
 .footer__social-list {
     margin-bottom: 22px;
-    position: relative !important;
     display: flex;
     gap: 15px;
-    top: auto;
-    right: auto;
     align-items: center;
     justify-content: center;
+
+    @include desktop-small {
+        margin-bottom: 0;
+    }
+}
+
+.footer__social-item {
+    width: 33px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $white;
+    border-radius: 50%;
+}
+
+.footer__social-link {
+    display: block;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: cover;
+    background-color: $white;
+}
+
+.footer__social-link--tg {
+    width: 18px;
+    height: 15px;
+    mask-image: url("../../images/icons/tg.svg");
+}
+
+.footer__social-link--wa {
+    width: 17px;
+    height: 17px;
+    mask-image: url("../../images/icons/wa.svg");
 }
 
 .footer__btn {
@@ -64,27 +154,56 @@ text-decoration: none;
     padding: 8px 20px;
     border-radius: 8px;
     font-family: $secondary-font-heavy;
+
+    @include desktop-small {
+        margin-bottom: 0;
+        font-size: rem(20);
+    }
 }
 
-.footer__line {
-    min-width: 395px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 .footer__copyright {
+    position: relative;
     font-size: rem(14);
-    color: $color-text;
+    color: $white;
     align-self: flex-start;
+    z-index: 10;
+
+    @include desktop {
+        position: relative;
+        bottom: -200px;
+        max-width: 1066px;
+        margin: 0 auto;
+        font-size: rem(20);
+        color: $color-text;
+    }
+
+    & a {
+        text-decoration: none;
+        font-size: inherit;
+        color: inherit;
+    }
 }
 
 .footer__btn-up {
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
     width: 17px;
     height: 17px;
     border: 2px solid $white;
     border-radius: 50%;
+    background-color: transparent;
     background-repeat: no-repeat;
     background-size: 9px 5px;
     background-position: center;
     background-image: url("../../images/icons/icon-arrow.svg");
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+
+    &--visible {
+        opacity: 1;
+        visibility: visible;
+    }
 }

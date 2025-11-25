@@ -34,41 +34,26 @@
 }
 
 .reviews__tab {
-    position: relative;
-    width: 254px;
-    min-height: 50px;
-    padding: 13px 40px 5px;
-    border: none;
-    font-family: $secondary-font-heavy;
-    font-size: rem(30);
-    line-height: normal;
-    text-align: center;
-    background-color: transparent;
-    color: $background-header;
-    cursor: pointer;        
-
-    &.active {
-        color: $brend-color;
-        background-color: $background-header;
-        border-radius: 20px 20px 0 0;
-
-        &::after {
-            position: absolute;
-            content: '';
-            width: 30px;
-            height: 30px;
-            background-image: url("../../images/icons/reviews-block.svg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            right: -29px;
-            bottom: 0;
-        }
-
-        &[data-review="2"],
-        &[data-review="3"],
-        &[data-review="4"],
-        &[data-review="5"] {
-            &::before {
+    @include desktop {
+        position: relative;
+        width: 254px;
+        min-height: 50px;
+        padding: 13px 40px 5px;
+        border: none;
+        font-family: $secondary-font-heavy;
+        font-size: rem(30);
+        line-height: normal;
+        text-align: center;
+        background-color: transparent;
+        color: $background-header;
+        cursor: pointer;        
+    
+        &.active {
+            color: $brend-color;
+            background-color: $background-header;
+            border-radius: 20px 20px 0 0;
+    
+            &::after {
                 position: absolute;
                 content: '';
                 width: 30px;
@@ -76,19 +61,37 @@
                 background-image: url("../../images/icons/reviews-block.svg");
                 background-repeat: no-repeat;
                 background-size: cover;
-                left: -29px;
+                right: -29px;
                 bottom: 0;
-                transform: scaleX(-1);
+            }
+    
+            &[data-review="2"],
+            &[data-review="3"],
+            &[data-review="4"],
+            &[data-review="5"] {
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 30px;
+                    height: 30px;
+                    background-image: url("../../images/icons/reviews-block.svg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    left: -29px;
+                    bottom: 0;
+                    transform: scaleX(-1);
+                }
+            }
+    
+            &[data-review="5"] {
+                justify-self: flex-end;
+    
+                &::after {
+                    display: none;
+                }
             }
         }
 
-        &[data-review="5"] {
-            justify-self: flex-end;
-
-            &::after {
-                display: none;
-            }
-        }
     }
 }
 
@@ -135,21 +138,22 @@
     color: $color-text-light-f4;
     border-radius: 0 20px 20px 20px;
 
-    .reviews__item[data-review="2"] &,
-    .reviews__item[data-review="3"] &,
-    .reviews__item[data-review="4"] & {
-        border-radius: 20px 20px 20px 20px;
-    }
-  
-    .reviews__item[data-review="5"] & {
-        border-radius: 20px 0 20px 20px;
-    }
-
+    
     @include desktop {
         padding: 87px 97px 87px 64px;
         grid-template-columns: 194px 1fr;
         grid-template-rows: min-content min-content;
         column-gap: 86px;
+        
+        .reviews__item[data-review="2"] &,
+        .reviews__item[data-review="3"] &,
+        .reviews__item[data-review="4"] & {
+            border-radius: 20px 20px 20px 20px;
+        }
+      
+        .reviews__item[data-review="5"] & {
+            border-radius: 20px 0 20px 20px;
+        }
     }
 }
 
