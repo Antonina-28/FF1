@@ -1,46 +1,24 @@
 @use '../common/all-dependencies' as *;
 
-.calculator {    
+.calculator {  
+    background: $background-calc;  
     color: $white;
 
     @include desktop {
         position: relative;
         overflow: hidden;
-
-        &::after {
-            position: absolute;
-            content: "";
-            width: 95%;
-            height: 80%;
-            top: -42px;
-            right: -27%;
-            background-image: url("../../images/moto.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-        }
-
-        // &::before {
-        //     position: absolute;
-        //     content: "";
-        //     width: 95%;
-        //     height: 95%;
-        //     background-image: url("../../images/hands.png");
-        //     background-repeat: no-repeat;
-        //     background-position: center;
-        //     background-size: contain;
-        // }
     }
 }
 
 .calculator__wrapper {
     padding: 55px 15px 26px;
-    background: $background-calc;
 
     @include desktop {
-        position: relative;
         padding: 160px 207px;
-        margin-bottom: 150px;
+        background-image: url("../../images/moto.png");
+        background-repeat: no-repeat;
+        background-position: right center;
+        background-size: contain;        
     }
 }
 
@@ -111,15 +89,14 @@
 }
 
 .calculator__description {
+    background-color: $color-text-light-f4;
     padding: 15px 15px 50px;
     font-size: rem(20);
     line-height: normal;
     color: $color-text;
 
     @include desktop {
-        max-width: 1324px;
         margin: 0 auto;
-        margin-bottom: 110px;
-        padding-left: 280px;
+        padding: 150px 280px 110px;
     }
 }

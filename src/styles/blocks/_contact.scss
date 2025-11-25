@@ -108,6 +108,7 @@
 
     @include desktop {
         grid-column: 1 / 4;
+        max-width: none;
         min-width: 212px;
         font-size: rem(15);
         justify-self: flex-end;
