@@ -127,6 +127,15 @@
     justify-content: center;
     border: 2px solid $white;
     border-radius: 50%;
+
+    @include desktop {
+        border: 2px solid $brend-color;
+
+        &:hover,
+        &:focus {
+            border: 2px solid $white;
+        }
+    }
 }
 
 .footer__social-link {
@@ -135,6 +144,15 @@
     mask-position: center;
     mask-size: cover;
     background-color: $white;
+
+    @include desktop {
+        background-color: $brend-color;
+
+        &:hover,
+        &:focus {
+            background-color: $white;
+        }
+    }
 }
 
 .footer__social-link--tg {
@@ -154,6 +172,7 @@
     padding: 8px 20px;
     border-radius: 8px;
     font-family: $secondary-font-heavy;
+    cursor: pointer;
 
     @include desktop-small {
         margin-bottom: 0;
@@ -201,6 +220,12 @@
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        border: 2px solid $brend-color;
+    }
 
     &--visible {
         opacity: 1;
