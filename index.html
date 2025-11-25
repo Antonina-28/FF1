@@ -275,20 +275,20 @@
         </section>
         <section class="reviews">
         <h2 class="reviews__title">Что говорят о нас клиенты</h2>
-        <div class="reviews__container">
-          <button class="reviews__tab>" type="button">Отзыв 1</button>
-          <button class="reviews__tab>" type="button">Отзыв 2</button>
-          <button class="reviews__tab>" type="button">Отзыв 3</button>
-          <button class="reviews__tab>" type="button">Отзыв 4</button>
-          <button class="reviews__tab>" type="button">Отзыв 5</button>
-        </div>
         <div class="reviews__wrap swiper" id="swiper-reviews">
+          <div class="reviews__container">
+            <button class="reviews__tab active" type="button" data-review="1">Отзыв&nbsp;1</button>
+            <button class="reviews__tab" type="button" data-review="2">Отзыв&nbsp;2</button>
+            <button class="reviews__tab" type="button" data-review="3">Отзыв&nbsp;3</button>
+            <button class="reviews__tab" type="button" data-review="4">Отзыв&nbsp;4</button>
+            <button class="reviews__tab" type="button" data-review="5">Отзыв&nbsp;5</button>
+          </div>
           <div class="reviews__navigation">
             <button class="reviews__nav-button reviews__nav-button--prev" aria-label="Предыдущий отзыв" type="button"></button>
             <button class="reviews__nav-button reviews__nav-button--next" aria-label="Следующий отзыв" type="button"></button>
           </div>
           <ul class="reviews__list swiper-wrapper">
-            <li class="reviews__item swiper-slide">
+            <li class="reviews__item swiper-slide" data-review="1">
               <p class="reviews__item-quote">Отзыв 1</p>
               <div class="reviews__item-wrapper">
                 <img src="./src/images/reviews.jpg" alt="Фото клиента" width="129" height="129" class="reviews__item-image">
@@ -296,15 +296,15 @@
                 <p class="reviews__item-text">Работаем с ФФ1 уже больше полугода. Очень удобно, что все процессы прозрачные — видно остатки, отчётность приходит вовремя, документы в порядке. Отгрузки на маркетплейсы идут стабильно, без задержек.Отдельно хочу отметить скорость реагирования менеджеров: любые вопросы решаются в тот же день, не приходится напоминать. Мы пробовали работать с другими фулфилментами, но здесь реально чувствуется системность и внимание к клиенту. Сейчас полностью передали им логистику — освободилось много времени, можем спокойно заниматься развитием продаж.</p>
               </div>
             </li>
-            <li class="reviews__item swiper-slide">
+            <li class="reviews__item swiper-slide" data-review="2">
               <p class="reviews__item-quote">Отзыв 2</p>
               <div class="reviews__item-wrapper">
                 <img src="./src/images/reviews.jpg" alt="Фото клиента" width="129" height="129" class="reviews__item-image">
-                <p class="reviews__item-name">Руководитель интернет-магазина “Fun hourse”</p>
+                <p class="reviews__item-name">Руководитель “Fun hourse”</p>
                 <p class="reviews__item-text">Работаем с ФФ1 уже больше полугода. Очень удобно, что все процессы прозрачные — видно остатки, отчётность приходит вовремя, документы в порядке. Отгрузки на маркетплейсы идут стабильно, без задержек.Отдельно хочу отметить скорость реагирования менеджеров: любые вопросы решаются в тот же день, не приходится напоминать. Мы пробовали работать с другими фулфилментами, но здесь реально чувствуется системность и внимание к клиенту. Сейчас полностью передали им логистику — освободилось много времени, можем спокойно заниматься развитием продаж.</p>
               </div>
             </li>
-            <li class="reviews__item swiper-slide">
+            <li class="reviews__item swiper-slide" data-review="3">
               <p class="reviews__item-quote">Отзыв 3</p>
               <div class="reviews__item-wrapper">
                 <img src="./src/images/reviews.jpg" alt="Фото клиента" width="129" height="129" class="reviews__item-image">
@@ -312,7 +312,7 @@
                 <p class="reviews__item-text">Работаем с ФФ1 уже больше полугода. Очень удобно, что все процессы прозрачные — видно остатки, отчётность приходит вовремя, документы в порядке. Отгрузки на маркетплейсы идут стабильно, без задержек.Отдельно хочу отметить скорость реагирования менеджеров: любые вопросы решаются в тот же день, не приходится напоминать. Мы пробовали работать с другими фулфилментами, но здесь реально чувствуется системность и внимание к клиенту. Сейчас полностью передали им логистику — освободилось много времени, можем спокойно заниматься развитием продаж.</p>
               </div>
             </li>
-            <li class="reviews__item swiper-slide">
+            <li class="reviews__item swiper-slide" data-review="4">
               <p class="reviews__item-quote">Отзыв 4</p>
               <div class="reviews__item-wrapper">
                 <img src="./src/images/reviews.jpg" alt="Фото клиента" width="129" height="129" class="reviews__item-image">
@@ -320,7 +320,7 @@
                 <p class="reviews__item-text">Работаем с ФФ1 уже больше полугода. Очень удобно, что все процессы прозрачные — видно остатки, отчётность приходит вовремя, документы в порядке. Отгрузки на маркетплейсы идут стабильно, без задержек.Отдельно хочу отметить скорость реагирования менеджеров: любые вопросы решаются в тот же день, не приходится напоминать. Мы пробовали работать с другими фулфилментами, но здесь реально чувствуется системность и внимание к клиенту. Сейчас полностью передали им логистику — освободилось много времени, можем спокойно заниматься развитием продаж.</p>
               </div>
             </li>
-            <li class="reviews__item swiper-slide">
+            <li class="reviews__item swiper-slide" data-review="5">
               <p class="reviews__item-quote">Отзыв 5</p>
               <div class="reviews__item-wrapper">
                 <img src="./src/images/reviews.jpg" alt="Фото клиента" width="129" height="129" class="reviews__item-image">
