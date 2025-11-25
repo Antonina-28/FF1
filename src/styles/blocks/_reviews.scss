@@ -28,7 +28,6 @@
 
     @include desktop {
         max-width: 1580px;
-        width: 1410px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
     }
