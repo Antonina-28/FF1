@@ -2,36 +2,32 @@
 
 .social-list {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 15px;
-
-    @include tablet {
-        flex-direction: row;
-        margin-bottom: 0;
-    }
-
     flex-direction: row;
     justify-content: flex-end;
+    gap: rem(15);
 
     @include tablet {
-        position: relative;
-        top: auto;
-        right: inherit;
-        gap: rem(10);
-        margin-right: rem(20);
+        gap: 0;
     }
 
-    @include desktop {
-        margin-right: rem(300);
+    @include desktop-small {
+        gap: rem(15);
     }
 }
 
 .social-list__item {
-    width: rem(40);
-    height: rem(40);
+    width: fluid(40, 32);
+    height: fluid(40, 32);
     border-radius: 50%;
     border: 1px solid $brend-color;
+
+    @include tablet {
+        border: none;
+    }
+
+    @include desktop-small {
+        border: 1px solid $brend-color;
+    }
 
     &:hover {
         opacity: 0.5;
@@ -43,8 +39,8 @@
 }
 
 .social-list__link {
-    width: rem(40);
-    height: rem(40);
+    width: fluid(40, 32);
+    height: fluid(40, 32);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +61,7 @@
 
 .social-list__link--tg {
     background-image: url('../../images/icons/tg.svg');
-    background-position: left 4px center;
+    background-position: left rem(4) center;
 }
 
 .social-list__link--wa {

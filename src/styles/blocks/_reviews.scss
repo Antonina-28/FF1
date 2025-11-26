@@ -2,14 +2,14 @@
 
 .reviews {
     position: relative;
-    max-width: 1580px;
+    max-width: rem(1580);
     margin: 0 auto;
-    margin-bottom: 81px;
-    padding: 0 15px;
+    margin-bottom: rem(81);
+    padding: 0 rem(15);
 }
 
 .reviews__title {
-    margin-bottom: 50px;
+    margin-bottom: rem(50);
     font-family: $secondary-font-bolditalic;
     font-size: rem(36);
     line-height: normal;
@@ -17,7 +17,7 @@
     text-transform: uppercase;
 
     @include desktop {
-        margin-bottom: 135px;
+        margin-bottom: rem(135);
         font-size: rem(70);
         text-align: center;
     }
@@ -27,7 +27,7 @@
     display: none;
 
     @include desktop {
-        max-width: 1580px;
+        max-width: rem(1580);
         display: grid;
         grid-template-columns: repeat(5, 1fr);
     }
@@ -36,9 +36,9 @@
 .reviews__tab {
     @include desktop {
         position: relative;
-        width: 254px;
-        min-height: 50px;
-        padding: 13px 40px 5px;
+        width: rem(254);
+        min-height: rem(50);
+        padding: rem(13) rem(40) rem(5);
         border: none;
         font-family: $secondary-font-heavy;
         font-size: rem(30);
@@ -51,17 +51,17 @@
         &.active {
             color: $brend-color;
             background-color: $background-header;
-            border-radius: 20px 20px 0 0;
+            border-radius: rem(20) rem(20) 0 0;
     
             &::after {
                 position: absolute;
                 content: '';
-                width: 30px;
-                height: 30px;
+                width: rem(30);
+                height: rem(30);
                 background-image: url("../../images/icons/reviews-block.svg");
                 background-repeat: no-repeat;
                 background-size: cover;
-                right: -29px;
+                right: rem(-29);
                 bottom: 0;
             }
     
@@ -72,12 +72,12 @@
                 &::before {
                     position: absolute;
                     content: '';
-                    width: 30px;
-                    height: 30px;
+                    width: rem(30);
+                    height: rem(30);
                     background-image: url("../../images/icons/reviews-block.svg");
                     background-repeat: no-repeat;
                     background-size: cover;
-                    left: -29px;
+                    left: rem(-29);
                     bottom: 0;
                     transform: scaleX(-1);
                 }
@@ -96,9 +96,9 @@
 }
 
 .reviews__navigation {
-    margin-right: 10px;
+    margin-right: rem(10);
     text-align: right;
-    margin-bottom: -34px;
+    margin-bottom: rem(-34);
     z-index: 100;
     pointer-events: none;
 
@@ -109,13 +109,13 @@
 
 .reviews__nav-button {
     position: relative;
-    width: 33px;
-    height: 33px;
+    width: rem(33);
+    height: rem(33);
     background-color: $brend-color;
     background-image: url("../../images/icons/head-arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 8px 13px;
+    background-size: rem(8) rem(13);
     border-radius: 50%;
     border: none;
     pointer-events: all;
@@ -123,7 +123,7 @@
 }
 
 .reviews__nav-button--prev {
-    margin-right: 5px;
+    margin-right: rem(5);
 }
 
 .reviews__nav-button--next {
@@ -131,40 +131,40 @@
 }
 
 .reviews__item-wrapper {
-    padding: 33px 22px 20px;
+    padding: rem(33) rem(22) rem(20);
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: $background-header;
     color: $color-text-light-f4;
-    border-radius: 0 20px 20px 20px;
+    border-radius: 0 rem(20) rem(20) rem(20);
 
     
     @include desktop {
-        padding: 87px 97px 87px 64px;
-        grid-template-columns: 194px 1fr;
+        padding: rem(87) rem(97) rem(87) rem(64);
+        grid-template-columns: rem(194) 1fr;
         grid-template-rows: min-content min-content;
-        column-gap: 86px;
+        column-gap: rem(86);
         
         .reviews__item[data-review="2"] &,
         .reviews__item[data-review="3"] &,
         .reviews__item[data-review="4"] & {
-            border-radius: 20px 20px 20px 20px;
+            border-radius: rem(20) rem(20) rem(20) rem(20);
         }
       
         .reviews__item[data-review="5"] & {
-            border-radius: 20px 0 20px 20px;
+            border-radius: rem(20) 0 rem(20) rem(20);
         }
     }
 }
 
 .reviews__item-quote {
     position: relative;
-    width: 175px;
-    padding: 16px 50px 0;
+    width: rem(175);
+    padding: rem(16) rem(50) 0;
     font-family: $secondary-font-heavy;
     background-color: $background-header;
     color: $brend-color;
-    border-radius: 20px 20px 0 0;
+    border-radius: rem(20) rem(20) 0 0;
 
     @include desktop {
         display: none;
@@ -173,30 +173,31 @@
     &::after {
         position: absolute;
         content: '';
-        width: 15px;
-        height: 15px;
+        width: rem(15);
+        height: rem(15);
         background-image: url("../../images/icons/reviews-block.svg");
         background-repeat: no-repeat;
         background-size: cover;
-        right: -15px;
+        right: rem(-15);
         bottom: 0;
 
         @include tablet {
-            right: -14px;
+            right: rem(-14);
         }
 
         @include desktop {
-            width: 30px;
-            height: 30px;
-            right: -30px;
+            width: rem(30);
+            height: rem(30);
+            right: rem(-30);
         }
     }
 }
 
 .reviews__item-image {
-    max-width: 129px;
-    width: 129px;
-    height: 129px;
+    max-width: rem(129);
+    width: rem(129);
+    height: rem(129);
+    margin-right: rem(20);
     border-radius: 50%;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
@@ -221,7 +222,7 @@
 }
 
 .reviews__item-text {
-    margin-top: 26px;
+    margin-top: rem(26);
     font-size: rem(18);
     line-height: normal;
     grid-row: 3 / 4;

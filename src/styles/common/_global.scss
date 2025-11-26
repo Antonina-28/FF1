@@ -3,6 +3,10 @@
 @use './variables' as *;
 @use './utils' as *;
 
+html {
+  font-size: fluid(24, 14, 2560, 320);
+}
+
 *,
 *::before,
 *::after {

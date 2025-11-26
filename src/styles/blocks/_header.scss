@@ -1,8 +1,8 @@
 @use '../common/all-dependencies' as *;
 
 .header {
-    min-height: rem(60);
-    max-width: rem(1580);
+    min-height: rem(60);    
+    max-width: rem(1580);    
     display: flex;
     align-items: center;
     background-image: url("../../images/icons/mask.svg");
@@ -17,51 +17,53 @@
     }
 
     @include desktop {
-        width: rem(1580);
+        width: 95%;
         margin: 0 auto;
         justify-content: flex-start;
     }
 }
 
 .header__logo {
-    width: clamp(139px, 10vw, 188px);
+    width: clamp(rem(139), 10vw, rem(188));
     height: auto;
     aspect-ratio: 188 / 37;
     object-fit: contain;
-    margin-right: 50px;
+    margin-right: rem(50);
     margin-left: rem(56);
 
     @include tablet {
-        margin-left: rem(36);
+        margin-left: rem(20);
         margin-right: rem(20);
     }
 
     @include desktop {
         margin-right: rem(30);
+        margin-left: 0;
     }
 }
 
 .header__btn {
-    display: none;
     position: relative;
+    display: block;
+    width: 100%;
     padding: rem(11) rem(30);
-    min-width: rem(250);
+    padding-left: fluid(30, 20);
     background-color: $brend-color;
     color: $color-text-light-f4;
     border: none;
     border-radius: rem(10);
     font-family: $secondary-font-demi;
-    font-size: rem(20);
+    font-size: fluid(20, 16);
     text-align: start;
     cursor: pointer;
 
     @include tablet {
-      display: block;
+      width: auto;
       padding: rem(8) rem(12);
       font-size: rem(16);
       min-width: max-content;
-      margin-left: rem(50);
-      margin-right: rem(36);
+      margin-left: rem(30);
+      margin-right: rem(20);
     }
 
     @include desktop-small {
@@ -70,11 +72,8 @@
         font-size: rem(20);
     }
 
-    @include mobile-only {
-      position: absolute;
-      top: rem(350);
-      right: rem(20);
-      z-index: 2;
+    @include desktop {
+        margin-right: 0;
     }
 
     &:hover::after,
@@ -88,8 +87,8 @@
     position: absolute;
     content: "";
     display: block;
-    width: rem(40);
-    height: rem(40);
+    width: fluid(40, 30);
+    height: fluid(40, 30);
     background-color: $white;
     border: 2px solid $white;
     border-radius: 50%;

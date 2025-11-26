@@ -3,13 +3,13 @@
 .form__fieldset {
     border: none;
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: rem(35);
     padding: 0;
     min-inline-size: auto;
 }
 
 .form__legend {
-    margin-bottom: 21px;
+    margin-bottom: rem(21);
     font-family: $secondary-font-medium;
     font-size: rem(21);
     line-height: normal;
@@ -18,8 +18,8 @@
 .form__labels {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 40px;
-    row-gap: 15px;
+    column-gap: rem(40);
+    row-gap: rem(15);
 }
 
 .form__label {
@@ -33,15 +33,15 @@
 
 .form__input {
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: rem(20);
+    height: rem(20);
     border-radius: 50%;
     background-color: $white;
     margin: 0;
-    margin-right: 7px;
+    margin-right: rem(7);
 
     &:checked {
-        border: 4px solid $brend-color !important;
+        border: rem(4) solid $brend-color !important;
     }
 }
 
@@ -98,7 +98,7 @@
 
     ::-webkit-slider-runnable-track {
         box-sizing: border-box;
-        height: 15px;
+        height: rem(15);
         background-color: $brend-color;
     }
 
@@ -109,8 +109,8 @@
 
     &::-webkit-slider-thumb {
         -webkit-appearance: none;
-        width: 13px;
-        height: 13px;
+        width: rem(13);
+        height: rem(13);
         border: none;
         border-radius: 50%;
         background: $brend-color;
@@ -118,8 +118,8 @@
     }
 
     &::-moz-range-thumb {
-        width: 13px;
-        height: 13px;
+        width: rem(13);
+        height: rem(13);
         margin-top: 0;
         border: none;
         border-radius: 50%;
@@ -129,65 +129,65 @@
 
     &:focus-visible {
         outline: none;
-        outline-offset: 10px;
-        outline: 1px solid $brend-color;
+        outline-offset: rem(10);
+        outline: rem(1) solid $brend-color;
     }
 
     &:hover::-webkit-slider-thumb,
     &:focus-visible::-webkit-slider-thumb {
-        box-shadow: 0 0 0 10px inset $brend-color;
+        box-shadow: 0 0 0 rem(10) inset $brend-color;
     }
 
     &:hover::-moz-range-thumb,
     &:focus-visible::-moz-range-thumb {
-        box-shadow: 0 0 0 10px inset $brend-color;
+        box-shadow: 0 0 0 rem(10) inset $brend-color;
     }
 
     &:active::-webkit-slider-thumb {
-        box-shadow: 0 0 0 30px inset $brend-color;
+        box-shadow: 0 0 0 rem(30) inset $brend-color;
     }
 
     &:active::-moz-range-thumb {
-        box-shadow: 0 0 0 30px inset $brend-color;
+        box-shadow: 0 0 0 rem(30) inset $brend-color;
     }
 
     &:disabled::-webkit-slider-thumb {
-            box-shadow: 0 0 0 30px inset $color-toggle;
+            box-shadow: 0 0 0 rem(30) inset $color-toggle;
 }
 
     &:disabled::-moz-range-thumb {
-        box-shadow: 0 0 0 30px inset $color-toggle;
+        box-shadow: 0 0 0 rem(30) inset $color-toggle;
     }
 
     &:focus-visible::-webkit-slider-thumb {
-        outline: 3px solid $brend-color;
+        outline: rem(3) solid $brend-color;
     }
 
     &:focus-visible::-moz-range-thumb {
-        outline: 3px solid $brend-color;
+        outline: rem(3) solid $brend-color;
     }
 
     &::-webkit-slider-runnable-track {
         box-sizing: border-box;
-        height: 2px;
+        height: rem(2);
         background: $color-toggle;
-        border-radius: 2px;
+        border-radius: rem(2);
     }
 
     &::-moz-range-track {
         box-sizing: border-box;
-        height: 2px;
+        height: rem(2);
         background: $color-toggle;
-        border-radius: 2px;
+        border-radius: rem(2);
     }
 
     &::-webkit-slider-thumb {
-        margin-top: -5px;
+        margin-top: rem(-5);
     }
 
     &::-moz-range-progress {
-        height: 2px;
-        border-radius: 2px;
+        height: rem(2);
+        border-radius: rem(2);
         background-color: $brend-color;
     }
 
@@ -195,7 +195,7 @@
         border-image:
             linear-gradient(90deg, #d40000 50%, #969696 0)
             0 1 /
-            calc(50% - 1px)
+            calc(50% - rem(1))
             100vw/0 100vw;
     }
 }

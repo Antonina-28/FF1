@@ -1,50 +1,50 @@
 @use '../common/all-dependencies' as *;
 
 .contact {
-    margin-bottom: 50px;
-    padding: 0 15px;
+    margin-bottom: rem(50);
+    padding: 0 rem(15);
     display: flex;
     justify-content: center;
     background-color: $color-text-light-f4;
     color: $white;
 
     @include desktop {
-        margin-bottom: 100px;
+        margin-bottom: rem(100);
     }
 }
 
 .contact__wrapper {
     position: relative;
-    max-width: 372px;
-    min-height: 960px;
-    padding: 115px 28px 64px 37px;
+    max-width: rem(372);
+    min-height: rem(960);
+    padding: rem(115) rem(28) rem(64) rem(37);
     background-image: url("../../images/form-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
 
     @include desktop-small {
-        padding: 73px 61px 39px 97px;
-        max-width: 994px;
-        min-height: min-content;
+        padding: rem(73) rem(61) rem(39) rem(97);
+        max-width: rem(994);
+        min-height: rem(370);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         background-image: url("../../images/form-desktop.png");
-        background-size: contain;
     }
 
     @include desktop {
-        max-width: 1580px;
-        min-height: 589px;
+        max-width: rem(1580);
+        min-height: rem(589);
         grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(2, min-content);
+        background-size: contain;
     }
 
     &::after {
         position: absolute;
         content: "";
-        width: 161px;
-        height: 38px;
-        bottom: 75px;
+        width: rem(161);
+        height: rem(38);
+        bottom: rem(75);
         left: 50%;
         transform: translateX(-50%);
         background-image: url("../../images/icons/logo.svg");
@@ -54,15 +54,15 @@
 
         @include desktop-small {
             bottom: auto;
-            top: 73px;
+            top: rem(73);
             left: 18%;
-            transform: none
+            transform: none;
         }
 
         @include desktop {
-            width: 256px;
-            height: 60px;
-            top: 95px;
+            width: rem(256);
+            height: rem(60);
+            top: rem(95);
             left: 16%;
         }
     }
@@ -70,27 +70,29 @@
 
 .contact__info {
     position: relative;
-    max-width: 212px;
-    margin-bottom: 15px;
+    max-width: rem(212);
+    margin-bottom: rem(15);
+    // margin-bottom: fluid(24, 12);
     display: block;
-    padding: 5px 64px 5px 10px;
+    padding: rem(5) rem(64) rem(5) rem(10);
     font-family: $secondary-font-btMediumItalic;
+    // font-size: fluid(18, 14);
     font-size: rem(15);
     line-height: normal;
     font-style: italic;
     color: $white;
     text-decoration: none;
     border: 2px solid $color-text-light-f4;
-    border-radius: 20px;
+    border-radius: rem(20);
 
     &::after {
         position: absolute;
         content: "";
         top: 50%;
         transform: translateY(-50%);
-        right: 8px;
-        width: 45px;
-        height: 15px;
+        right: rem(8);
+        width: rem(45);
+        height: rem(15);
         background-image: url("../../images/icons/streak-4.svg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -102,56 +104,57 @@
         align-self: flex-end;
         grid-row: 2 / 3;
         grid-column: 1 / 2;
-        max-width: 180px;
+        max-width: rem(180);
         font-size: rem(12);
     }
 
     @include desktop {
         grid-column: 1 / 4;
         max-width: none;
-        min-width: 212px;
+        min-width: rem(212);
         font-size: rem(15);
         justify-self: flex-end;
-        margin-right: 75px;
+        margin-right: rem(75);
     }
 }
 
 .contact__info--mail {
-    margin-bottom: 200px;
+    margin-bottom: rem(200);
+    //margin-bottom: fluid(200, 100);
     &::after {
-        width: 66px;
+        width: rem(66);
         background-image: url("../../images/icons/streak-6.svg");
     }
 
     @include desktop-small {
         margin-bottom: 0;
-        margin-left: -20px;
+        margin-left: rem(-20);
         grid-column: 2 / 3;
     }
 
     @include desktop {
         grid-column: 3 / 6;
         margin-left: 0;
-        margin-right: 75px;
+        margin-right: rem(75);
     }
 }
 
 .contact__title {
-    padding: 52px 0 30px;
+    padding: rem(52) 0 rem(30);
     font-family: $secondary-font-bolditalic;
-    font-size: rem(26);
+    font-size: fluid(30, 20);
     line-height: normal;
     text-transform: uppercase;
 
     @include desktop-small {
-        margin-bottom: 20px;
+        margin-bottom: rem(3);
         padding: 0;
         grid-column: 3 / 5;
     }
 
     @include desktop {
-        margin-bottom: 36px;
-        padding-top: 30px;
+        margin-bottom: rem(36);
+        padding-top: rem(30);
         grid-column: 6 / 10;
         font-size: rem(40);
     }

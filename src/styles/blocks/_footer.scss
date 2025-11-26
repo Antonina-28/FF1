@@ -2,34 +2,34 @@
 
 .footer {
     position: relative;
-    padding: 81px 15px 10px;
+    padding: rem(81) rem(15) rem(10);
 
     @include desktop {
-        min-height: 456px;
-        padding-top: 105px;
-        padding-bottom: 50px;
+        min-height: rem(456);
+        padding-top: rem(105);
+        padding-bottom: rem(50);
     }
 
     &::after {
         position: absolute;
         content: "";
-        width: 246px;
-        height: 48px;
+        width: rem(246);
+        height: rem(48);
         background-image: url("../../images/icons/logo.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        top: 15px;
+        top: rem(15);
         left: 50%;
         transform: translateX(-50%);
         z-index: -1;
         filter: blur(4px);
 
         @include desktop {
-            width: 1066px;
-            height: 206px;
+            width: rem(1066);
+            height: rem(206);
             top: auto;
-            bottom: 92px;
+            bottom: rem(92);
         }
     }
 
@@ -41,7 +41,7 @@
         right: 0;
         height: 100%;
         background: linear-gradient(180deg, rgba(188, 188, 188, 0.46) 0%, rgba(0, 0, 0, 0.46) 100%);
-        border-radius: 30px 30px 0 0;
+        border-radius: rem(30) rem(30) 0 0;
     
         /* Трапеция: УЗКО вверху, ШИРОКО внизу */
         clip-path: polygon(
@@ -63,9 +63,9 @@
     z-index: 10;
 
     @include desktop-small {
-        max-width: 1046px;
+        max-width: rem(1046);
         margin: 0 auto;
-        margin-bottom: 50px;
+        margin-bottom: rem(50);
         flex-direction: row;
         justify-content: space-evenly;
     }
@@ -76,19 +76,19 @@
 }
 
 .footer__list {
-    margin-bottom: 22px;
+    margin-bottom: rem(22);
     color: $color-text;
     font-size: rem(16);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: rem(15);
 
     @include desktop-small {
         margin-bottom: 0;
         flex-direction: row;
         font-size: rem(20);
-        gap: 65px;
+        gap: rem(65);
     }
 }
 
@@ -108,9 +108,9 @@
 }
 
 .footer__social-list {
-    margin-bottom: 22px;
+    margin-bottom: rem(22);
     display: flex;
-    gap: 15px;
+    gap: rem(15);
     align-items: center;
     justify-content: center;
 
@@ -120,12 +120,12 @@
 }
 
 .footer__social-item {
-    width: 33px;
-    height: 33px;
+    width: rem(33);
+    height: rem(33);
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid $white;
+        border: 2px solid $white;
     border-radius: 50%;
 
     @include desktop {
@@ -156,21 +156,21 @@
 }
 
 .footer__social-link--tg {
-    width: 18px;
-    height: 15px;
+    width: rem(18);
+    height: rem(15);
     mask-image: url("../../images/icons/tg.svg");
 }
 
 .footer__social-link--wa {
-    width: 17px;
-    height: 17px;
+    width: rem(17);
+    height: rem(17);
     mask-image: url("../../images/icons/wa.svg");
 }
 
 .footer__btn {
-    margin-bottom: 23px;
-    padding: 8px 20px;
-    border-radius: 8px;
+    margin-bottom: rem(23);
+    padding: rem(8) rem(20);
+    border-radius: rem(8);
     font-family: $secondary-font-heavy;
     cursor: pointer;
 
@@ -189,8 +189,8 @@
 
     @include desktop {
         position: relative;
-        bottom: -200px;
-        max-width: 1066px;
+        bottom: rem(-200);
+        max-width: rem(1066);
         margin: 0 auto;
         font-size: rem(20);
         color: $color-text;
@@ -200,20 +200,29 @@
         text-decoration: none;
         font-size: inherit;
         color: inherit;
+
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+
+        &:active {
+            text-decoration: underline;
+        }
     }
 }
 
 .footer__btn-up {
     position: fixed;
-    right: 20px;
-    bottom: 15px;
-    width: 17px;
-    height: 17px;
+    right: rem(20);
+    bottom: rem(15);
+    width: rem(17);
+    height: rem(17);
     border: 2px solid $white;
     border-radius: 50%;
     background-color: transparent;
     background-repeat: no-repeat;
-    background-size: 9px 5px;
+    background-size: rem(9) rem(5);
     background-position: center;
     background-image: url("../../images/icons/icon-arrow.svg");
     opacity: 0;
@@ -221,6 +230,11 @@
     transition: all 0.3s ease;
     z-index: 1000;
     cursor: pointer;
+
+    @include desktop {
+        bottom: rem(40);
+        right: rem(50);
+    }
 
     &:hover,
     &:focus {

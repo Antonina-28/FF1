@@ -10,9 +10,9 @@
   top: 50%;
   transform: translateY(-50%);
   display: inline-block;
-  padding: 2px 30px;
+  padding: rem(8) rem(30);
   font-family: $secondary-font-bolditalic;
-  font-size: rem(16);
+  font-size: fluid(11, 10);
   line-height: 100%;
   text-transform: uppercase;
   font-weight: 700;
@@ -23,7 +23,7 @@
 
   @include tablet {
     font-size: rem(24);
-    padding: 5px 30px;
+    padding: rem(5) rem(30);
   }
 
   & p {
@@ -32,20 +32,20 @@
 
   & p:first-child {
     @include tablet {
-        padding-left: 50px;
+        padding-left: rem(50);
     }
   }
 
   & p:last-child {
-    padding-left: 25px;
+    padding-left: rem(25);
   }
 }
 
 .article__line img {
   width: 100vw;
-  height: 26px;
+  height: rem(26);
 
   @include tablet {
-    height: 48px;
+    height: rem(48);
   }
 }

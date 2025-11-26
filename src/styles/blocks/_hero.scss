@@ -3,14 +3,14 @@
 .hero {
     position: relative;
     width: 95%;
-    height: 482px;
+    height: rem(482);
     margin: 0 auto;
     margin-top: rem(38);
     margin-bottom: rem(21);
     background-image: url("../../images/hero-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 20px;
+    border-radius: rem(20);
 
     @include tablet {
         background-position: bottom;
@@ -18,8 +18,8 @@
 
     @include desktop-small {
         background-image: url("../../images/hero-desktop.jpg");        
-        height: 702px;  
-        max-width: 1580px;     
+        height: rem(702);  
+        max-width: rem(1580);     
     }
 }
 
@@ -28,16 +28,24 @@
 
     @include tablet {
         position: absolute;
-        bottom: 185px;
-        left: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: rem(60);
         display: block;
+    }
+
+    @include desktop-small {
+        top: auto;
+        transform: none;
+        bottom: rem(185);
     }
 }
 
 .hero__title {
     max-width: rem(319);
     margin: 0 auto;
-    padding-top: 34px;
+    padding: 0 rem(10);
+    padding-top: rem(34);
     font-family: $secondary-font-heavy;
     font-size: rem(20);
     color: $color-text-light-f4;
@@ -45,8 +53,8 @@
 
     @include tablet {
         position: absolute;
-        bottom: 100px;
-        left: 60px;
+        bottom: rem(100);
+        left: rem(60);
         max-width: rem(746);
         font-size: rem(31);
         line-height: 100%;
@@ -59,12 +67,12 @@
 
 .hero__btn {
     position: absolute;
-    bottom: 101px;
-    right: -24px;
-    padding: 6px 10px 10px;
+    bottom: rem(101);
+    right: rem(-24);
+    padding: rem(6) rem(10) rem(10);
     font-family: $secondary-font-heavy;
     font-size: rem(16);
     border: 1px solid $brend-color;
-    border-radius: 2px;
+    border-radius: rem(2);
     transform: rotate(-90deg);
 }

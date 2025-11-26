@@ -1,9 +1,9 @@
 @use '../common/all-dependencies' as *;
 
 .total {
-    padding: 16px 19px;
+    padding: rem(16) rem(19);
     background-color: $background-rezult;
-    border-radius: 16px;
+    border-radius: rem(16);
     border: 3px solid $brend-color;
 
     @include tablet {
@@ -13,19 +13,19 @@
 
     @include desktop-small {
         position: absolute;
-        right: 25px;
-        bottom: 65px;
-        width: 380px;
+        right: rem(25);
+        bottom: rem(65);
+        width: rem(380);
     }
 
     @include desktop {
-        right: 70px;
+        right: rem(70);
     }
 }
 
 .total__title {
     position: relative;
-    margin-bottom: 12px;
+    margin-bottom: rem(12);
     font-family: $secondary-font-bolditalic;
     font-size: rem(22);
     line-height: normal;
@@ -36,16 +36,15 @@
         content: "";
         right: 0;
         top: 50%;
-        transform: translateY(-50%);
-        width: 13px;
-        height: 13px;
+        width: rem(13);
+        height: rem(13);
         border-radius: 50%;
         background-color: $brend-color;
         background-image: url("../../images/icons/head-arrow.svg");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 8px 5px;
-        transform: rotate(-90deg);
+        background-size: rem(8) rem(5);
+        transform: translateY(-50%) rotate(-90deg);
     }
 }
 
@@ -57,9 +56,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2px 7px;
+    padding: rem(2) rem(7);
     background-color: $brend-color;
-    border-radius: 5px;
+    border-radius: rem(5);
     font-family: $secondary-font-medium;
     font-size: rem(21);
     line-height: normal;

@@ -3,11 +3,11 @@
 .form-contact {
     display: flex;
     flex-direction: column;
-    gap: 33px;
+    gap: rem(33);
 
     @include desktop-small {
         grid-column: 3 / 5;
-        gap: 25px;
+        gap: rem(15);
     }
 
     @include desktop {
@@ -25,9 +25,11 @@
         font-size: rem(25);
     }
 
+    font-size: fluid(24, 16);
+
     &::placeholder {
         font-family: $secondary-font-bolditalic;
-        font-size: rem(20);
+        font-size: fluid(20, 14);
         line-height: normal;
         font-style: italic;
         text-transform: uppercase;
@@ -35,8 +37,8 @@
 
         @include desktop {
             font-size: rem(25);
-            padding-left: 5px;
-            padding-bottom: 5px;
+            padding-left: rem(5);
+            padding-bottom: rem(5);
         }
     }
 }
@@ -45,28 +47,28 @@
     display: grid;
     grid-template-columns: min-content 1fr;
     align-items: center;
-    row-gap: 33px;
+    row-gap: rem(33);
     font-family: $secondary-font-btMediumItalic;
     font-size: rem(12);
 
     @include desktop-small {
-        row-gap: 0;
+        row-gap: rem(10);
     }
 
     @include desktop {
-        row-gap: 20px;
+        row-gap: rem(20);
     }
 }
 
 .form-contact__checkbox {
     appearance: none;
-    width: 12px;
-    height: 12px;
+    width: rem(12);
+    height: rem(12);
     border: 1px solid $brend-color;
 
     @include desktop {
-        width: 18px;
-        height: 18px;
+        width: rem(18);
+        height: rem(18);
     }
 }
 
@@ -83,9 +85,9 @@
 .form-contact__btn {
     grid-column: 2 / 3;
     justify-self: flex-end;
-    width: 161px;
-    height: 37px;
-    padding-right: 24px;
+    width: rem(161);
+    height: rem(37);
+    padding-right: rem(24);
     border: none;
     background-color: transparent;
     background-image: url("../../images/icons/start.svg");
@@ -99,8 +101,8 @@
     color: $brend-color;
 
     @include desktop {
-        width: 240px;
-        height: 55px;
+        width: rem(240);
+        height: rem(55);
         font-size: rem(34);
         justify-self: flex-start;
         grid-column: 1 / 3;

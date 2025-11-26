@@ -4,3 +4,24 @@
 @function rem($pixels) {
   @return #{math.div($pixels, 16)}rem;
 }
+
+// Fluid typography helper. Accepts px values and converts to rem-based clamp.
+@function fluid(
+  $max: 50,
+  $min: 14,
+  $maxViewportWidth: 1920,
+  $minViewportWidth: 360
+) {
+  $maxSize: math.div($max, 16);
+  $minSize: math.div($min, 16);
+  $maxWidth: math.div($maxViewportWidth, 16);
+  $minWidth: math.div($minViewportWidth, 16);
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersection: -$minWidth * $slope + $minSize;
+
+  @return clamp(
+    #{$minSize * 1rem},
+    #{$yAxisIntersection * 1rem} + #{$slope * 100vw},
+    #{$maxSize * 1rem}
+  );
+}
