@@ -1,8 +1,10 @@
+import { FormValidator } from './form-validator.js';
 export class Popup {
   constructor(templateId) {
     this.templateId = templateId;
     this.popup = null;
     this.isInitialized = false;
+    this.formValidator = null;
   }
 
   init() {
@@ -17,6 +19,12 @@ export class Popup {
     this.popup = template.content.cloneNode(true).firstElementChild;
     document.body.appendChild(this.popup);
     this.setupEvents();
+
+    const form = this.popup.querySelector('.popup__form');
+    if (form) {
+      this.formValidator = new FormValidator(form);
+    }
+
     this.isInitialized = true;
   }
 
@@ -60,7 +68,18 @@ export class Popup {
     setTimeout(() => {
       this.popup.style.display = 'none';
       document.body.style.overflow = '';
+
+      if (this.formValidator) {
+        this.formValidator.clearForm();
+      }
     }, 300);
+
+  }
+
+  clearForm() {
+    if (this.formValidator) {
+      this.formValidator.clearForm();
+    }
   }
 
   isOpen() {
@@ -69,6 +88,7 @@ export class Popup {
 
   destroy() {
     if (this.popup && this.popup.parentNode) {
+      this.clearForm();
       this.popup.parentNode.removeChild(this.popup);
       this.isInitialized = false;
     }

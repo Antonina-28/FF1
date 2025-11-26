@@ -375,17 +375,26 @@
           <p class="popup__description">и мы возьмём логистику на себя</p>
           <div class="popup__body">
               <form class="popup__form" action="#" method="post">
-              <input class="popup__input" type="text" name="name" id="popup-name" placeholder="Имя" required>
-              <input class="popup__input" type="tel" name="phone" id="popup-phone" placeholder="Телефон" required>
-              <input class="popup__input" type="email" name="email" id="popup-email" placeholder="E-mail" required>
-              <div class="popup__group">
-                <input class="popup__checkbox" type="checkbox" name="policy" id="popup-policy" required>
-                <p class="popup__text">Соглашаюсь с
-                  <a class="popup__link" href="#">Политикой конфиденциальности</a>
-                </p>
-              </div>
-              <button class="popup__btn button" type="submit">Отправить</button>
-            </form>
+                <div>
+                  <input class="popup__input" type="text" name="name" id="popup-name" placeholder="Имя" required>
+                  <span class="popup__error"></span>
+                </div>
+                <div>
+                  <input class="popup__input" type="tel" name="phone" id="popup-phone" placeholder="Телефон" required>
+                  <span class="popup__error"></span>
+                </div>
+                <div>
+                  <input class="popup__input" type="email" name="email" id="popup-email" placeholder="E-mail" required>
+                  <span class="popup__error"></span>
+                </div>
+                <div class="popup__group">
+                  <input class="popup__checkbox" type="checkbox" name="policy" id="popup-policy" required>
+                  <p class="popup__text">Соглашаюсь с
+                    <a class="popup__link" href="#">Политикой конфиденциальности</a>
+                  </p>
+                </div>
+                <button class="popup__btn button" type="submit">Отправить</button>
+              </form>
           </div>
         </div>
       </div>
