@@ -176,16 +176,26 @@ export class FormValidator {
     return isFormValid;
   }
 
-  clearForm() {
+  clearForm(force = false) {
     if (!this.form) return;
     
-    // Сбрасываем значения полей
+    // Если форма не отправлена и force = false, спрашиваем подтверждение
+    if (!force && this.hasUserInput() && !this.wasSubmitted) {
+      const shouldClear = confirm('Вы уверены, что хотите очистить форму? Введенные данные будут потеряны.');
+      if (!shouldClear) return;
+    }
+
     this.form.reset();
-    
-    // Очищаем стили валидации
     this.clearValidationStates();
-    
-    console.log('Форма очищена');
+    this.wasSubmitted = false;
+  }
+
+  hasUserInput() {
+    const inputs = this.form.querySelectorAll('.popup__input');
+    for (let input of inputs) {
+      if (input.value.trim() !== '') return true;
+    }
+    return false;
   }
 
   clearValidationStates() {
