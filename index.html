@@ -58,7 +58,7 @@
               </a>
             </li>
           </ul>
-          <button class="main-nav__cta header__btn button">Оставить заявку</button>
+          <button class="main-nav__cta header__btn button" data-popup-open>Оставить заявку</button>
         </div>
       </nav>
     </header>
@@ -151,7 +151,7 @@
           <div class="rate__wrapper">
             <h2 class="rate__title">Гибкие тарифы<br> под ваши задачи</h2>
             <p class="rate__text">Рассчитаем оптимальное решение<br> по маршрутам, срокам и объёмам.</p>
-            <button class="rate__btn button" type="button">Оставить заявку</button>
+            <button class="rate__btn button" type="button" data-popup-open>Оставить заявку</button>
             <img class="rate__image" src="./src/images/icons/logo.svg" width="140" height="33" alt="Логотип ФФ1" >
             <span class="rate__brend-text">фулфилмент</span>
           </div>
@@ -361,11 +361,35 @@
             </a>
           </li>
         </ul>
-        <button class="footer__btn button">Связаться с нами</button>
+        <button class="footer__btn button" data-popup-open>Связаться с нами</button>
       </div>
       <p class="footer__copyright"><a class="footer__link-policy" href="#">Политикой конфиденциальности</a></p>
       <button class="footer__btn-up" aria-label="Наверх"></button>
     </footer>
+    <template id="popup-template">
+      <div class="popup" id="popup">
+        <div class="popup__overlay" data-close></div>
+        <div class="popup__content">
+          <button class="popup__close" type="button" aria-label="Закрыть" data-close></button>
+          <h2 class="popup__title">Заполните форму</h2>
+          <p class="popup__description">и мы возьмём логистику на себя</p>
+          <div class="popup__body">
+              <form class="popup__form" action="#" method="post">
+              <input class="popup__input" type="text" name="name" id="popup-name" placeholder="Имя" required>
+              <input class="popup__input" type="tel" name="phone" id="popup-phone" placeholder="Телефон" required>
+              <input class="popup__input" type="email" name="email" id="popup-email" placeholder="E-mail" required>
+              <div class="popup__group">
+                <input class="popup__checkbox" type="checkbox" name="policy" id="popup-policy" required>
+                <p class="popup__text">Соглашаюсь с
+                  <a class="popup__link" href="#">Политикой конфиденциальности</a>
+                </p>
+              </div>
+              <button class="popup__btn button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </template>
     <script type="module" src="/src/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>

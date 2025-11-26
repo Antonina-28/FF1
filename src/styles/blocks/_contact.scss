@@ -72,11 +72,9 @@
     position: relative;
     max-width: rem(212);
     margin-bottom: rem(15);
-    // margin-bottom: fluid(24, 12);
     display: block;
     padding: rem(5) rem(64) rem(5) rem(10);
     font-family: $secondary-font-btMediumItalic;
-    // font-size: fluid(18, 14);
     font-size: rem(15);
     line-height: normal;
     font-style: italic;
@@ -116,11 +114,20 @@
         justify-self: flex-end;
         margin-right: rem(75);
     }
+
+    &:hover,
+    &:focus {
+        border-color: $brend-color;
+        color: $brend-color;
+    }
+
+    &:active {
+        opacity: 0.7;
+    }
 }
 
 .contact__info--mail {
     margin-bottom: rem(200);
-    //margin-bottom: fluid(200, 100);
     &::after {
         width: rem(66);
         background-image: url("../../images/icons/streak-6.svg");
