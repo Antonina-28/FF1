@@ -45,157 +45,21 @@
     }
 }
 
-.form__fieldset-scheme {
-    @include desktop-small {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
+.form__input[type="number"] {
+    width: fluid(70, 50);
+    height: fluid(40, 20);
+    padding: 0 fluid(8, 5);
+    border: none;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+        border: rem(2) solid $brend-color;
     }
 }
 
-.form__fieldset-pickup {
-    @include desktop-small {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-    }
-}
-
-.form__fieldset-quantity {
-    @include desktop-small {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-    }
-}
-
-.form__fieldset-boxes {
-    @include desktop-small {
-        grid-column: 1 / 2;
-        grid-row: 4 / 5;
-    }
-
-    @include desktop {
-        margin-bottom: 0;
-    }
-}
-
-.form__fieldset-quantity,
-.form__fieldset-boxes {
-    position: relative;
-    overflow: hidden;
-}
-
-.form__wrapper-quantity,
-.form__wrapper-boxes {
-    text-align: right;
-    // position: absolute;
-    // top: -45px;
-    // right: 2%;
-}
-
-.form__range {
-    appearance: none;
-    background: none;
-    width: 100%;
-
-    ::-webkit-slider-runnable-track {
-        box-sizing: border-box;
-        height: rem(15);
-        background-color: $brend-color;
-    }
-
-    &::-moz-range-track {
-        box-sizing: border-box;
-        background-color: #2b2a33;
-    }
-
-    &::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        width: rem(13);
-        height: rem(13);
-        border: none;
-        border-radius: 50%;
-        background: $brend-color;
-        transition: 300ms;
-    }
-
-    &::-moz-range-thumb {
-        width: rem(13);
-        height: rem(13);
-        margin-top: 0;
-        border: none;
-        border-radius: 50%;
-        background: $brend-color;
-        transition: 300ms;
-    }
-
-    &:focus-visible {
-        outline: none;
-        outline-offset: rem(10);
-        outline: rem(1) solid $brend-color;
-    }
-
-    &:hover::-webkit-slider-thumb,
-    &:focus-visible::-webkit-slider-thumb {
-        box-shadow: 0 0 0 rem(10) inset $brend-color;
-    }
-
-    &:hover::-moz-range-thumb,
-    &:focus-visible::-moz-range-thumb {
-        box-shadow: 0 0 0 rem(10) inset $brend-color;
-    }
-
-    &:active::-webkit-slider-thumb {
-        box-shadow: 0 0 0 rem(30) inset $brend-color;
-    }
-
-    &:active::-moz-range-thumb {
-        box-shadow: 0 0 0 rem(30) inset $brend-color;
-    }
-
-    &:disabled::-webkit-slider-thumb {
-            box-shadow: 0 0 0 rem(30) inset $color-toggle;
-}
-
-    &:disabled::-moz-range-thumb {
-        box-shadow: 0 0 0 rem(30) inset $color-toggle;
-    }
-
-    &:focus-visible::-webkit-slider-thumb {
-        outline: rem(3) solid $brend-color;
-    }
-
-    &:focus-visible::-moz-range-thumb {
-        outline: rem(3) solid $brend-color;
-    }
-
-    &::-webkit-slider-runnable-track {
-        box-sizing: border-box;
-        height: rem(2);
-        background: $color-toggle;
-        border-radius: rem(2);
-    }
-
-    &::-moz-range-track {
-        box-sizing: border-box;
-        height: rem(2);
-        background: $color-toggle;
-        border-radius: rem(2);
-    }
-
-    &::-webkit-slider-thumb {
-        margin-top: rem(-5);
-    }
-
-    &::-moz-range-progress {
-        height: rem(2);
-        border-radius: rem(2);
-        background-color: $brend-color;
-    }
-
-    &::-webkit-slider-thumb {
-        border-image:
-            linear-gradient(90deg, #d40000 50%, #969696 0)
-            0 1 /
-            calc(50% - rem(1))
-            100vw/0 100vw;
-    }
+.form__input[type="number"]::-webkit-inner-spin-button,
+.form__input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
