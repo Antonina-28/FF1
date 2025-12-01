@@ -168,13 +168,13 @@
                         <legend class="form__legend">Параметры:</legend>
                         <div class="form__labels">
                           <label class="form__label" for="width">Ширина (см)
-                          <input class="form__input" type="number" name="parameter-width" id="width" value="width">
+                          <input class="form__input form__input--width" type="number" name="parameter-width" id="width" value="width">
                           </label>
                           <label class="form__label" for="depth">Глубина (см)
-                          <input class="form__input" type="number" name="parameter-depth" id="depth" value="depth"> 
+                          <input class="form__input form__input--depth" type="number" name="parameter-depth" id="depth" value="depth"> 
                           </label>
                           <label class="form__label" for="height">Высота (см)
-                          <input class="form__input" type="number" name="parameter-height" id="height" value="height"> 
+                          <input class="form__input form__input--height" type="number" name="parameter-height" id="height" value="height"> 
                           </label>
                         </div>
                       </fieldset>
@@ -205,25 +205,25 @@
                         <legend class="form__legend">Упаковочный материал:</legend>
                         <div class="form__labels">
                           <label class="form__label" for="courier-package">Курьерский пакет
-                          <input class="form__input" type="radio" name="material" id="courier-package" value="courier-package">
+                          <input class="form__input form__input--material form__input--package" type="radio" name="material" id="courier-package" value="courier-package">
                           </label>
                           <label class="form__label" for="zip-package">Зип лок пакет
-                          <input class="form__input" type="radio" name="material" id="zip-package" value="zip-package">
+                          <input class="form__input form__input--material form__input--zip" type="radio" name="material" id="zip-package" value="zip-package">
                           </label>
                           <label class="form__label" for="corrugation-box">Гофра короб
-                          <input class="form__input" type="radio" name="material" id="corrugation-box" value="corrugation-box" checked>
+                          <input class="form__input form__input--material form__input--box" type="radio" name="material" id="corrugation-box" value="corrugation-box" checked>
                           </label>
                         </div>
                       </fieldset>
                     </div>
                     <div class="form__total total">
                       <h3 class="total__title">ИТОГ:</h3>
-                      <dl class="total__list">
+                      <div class="total__list">
                         <div class="total__item">
-                          <dt class="total__name">Наименование</dt>
-                          <dd class="total__value">Сумма</dd>
+                          <p class="total__name">Сумма</p>
+                          <span class="total__value">0</span>
                         </div>
-                      </dl>
+                      </div>
                     </div>
                 </form>
               </div>
@@ -236,12 +236,22 @@
             <a class="contact__info contact__info--phone" href="tel:79999999999">+7 (999)999 99 99</a>
             <a class="contact__info contact__info--mail" href="mailto:INFO@FF1.RU">INFO@FF1.RU</a>
             <h2 class="contact__title">Ваш билет в мир быстрой логистики</h2>
-            <form class="contact__form form-contact" action="#" method="post">
-              <input class="form-contact__input" type="text" name="name" id="name" placeholder="Имя" required>
-              <input class="form-contact__input" type="tel" name="phone" id="phone" placeholder="Телефон" required>
-              <input class="form-contact__input" type="email" name="email" id="email" placeholder="E-mail" required>
+            <form class="contact__form form-contact" action="#" method="post" novalidate>
+              <div>
+                <input class="form-contact__input" type="text" name="name" id="name" placeholder="Имя" required>
+                <span class="form-contact__error"></span>
+              </div>
+              <div>
+                <input class="form-contact__input" type="tel" name="phone" id="phone" placeholder="Телефон" required>
+                <span class="form-contact__error"></span>
+              </div>
+              <div>
+                <input class="form-contact__input" type="email" name="email" id="email" placeholder="E-mail" required>
+                <span class="form-contact__error"></span>
+              </div>
               <div class="form-contact__group">
                 <input class="form-contact__checkbox" type="checkbox" name="policy" id="policy" required>
+                <span class="form-contact__error"></span>
                 <p class="form-contact__text">Соглашаюсь с
                   <a class="form-contact__link" href="#">Политикой конфиденциальности</a>
                 </p>
@@ -344,7 +354,7 @@
           <h2 class="popup__title">Заполните форму</h2>
           <p class="popup__description">и мы возьмём логистику на себя</p>
           <div class="popup__body">
-              <form class="popup__form" action="#" method="post">
+              <form class="popup__form" action="#" method="post" novalidate>
                 <div>
                   <input class="popup__input" type="text" name="name" id="popup-name" placeholder="Имя" required>
                   <span class="popup__error"></span>
@@ -359,6 +369,7 @@
                 </div>
                 <div class="popup__group">
                   <input class="popup__checkbox" type="checkbox" name="policy" id="popup-policy" required>
+                  <span class="popup__error"></span>
                   <p class="popup__text">Соглашаюсь с
                     <a class="popup__link" href="#">Политикой конфиденциальности</a>
                   </p>

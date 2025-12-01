@@ -1,8 +1,24 @@
 export class FormValidator {
-  constructor(form) {
+  constructor(form, config = {}) {
     this.form = form;
-    this.init();
+    this.wasSubmitted = false;
+    this.config = {
+      inputSelector: '.popup__input',
+      checkboxSelector: '.popup__checkbox',
+      groupSelector: '.popup__group',
+      errorClass: 'popup__error',
+      inputErrorClass: 'popup__input--error',
+      inputSuccessClass: 'popup__input--success',
+      groupErrorClass: 'popup__group--error',
+      successClass: 'popup__success',
+      ...config
+    };
+    if (this.form) {
+      this.init();
+    } else {
+      console.error('Form element not provided');
   }
+}
 
   init() {
     this.setupValidation();
@@ -11,7 +27,7 @@ export class FormValidator {
   }
 
   setupValidation() {
-    const inputs = this.form.querySelectorAll('.popup__input');
+    const inputs = this.form.querySelectorAll(this.config.inputSelector);
     
     inputs.forEach(input => {
       input.addEventListener('input', (e) => {
@@ -24,7 +40,7 @@ export class FormValidator {
     });
 
     // Валидация чекбокса
-    const checkbox = this.form.querySelector('.popup__checkbox');
+    const checkbox = this.form.querySelector(this.config.checkboxSelector);
     if (checkbox) {
       checkbox.addEventListener('change', () => {
         this.validateCheckbox(checkbox);
@@ -124,14 +140,14 @@ export class FormValidator {
   }
 
   setFieldState(field, isValid, message) {
-    field.classList.toggle('popup__input--error', !isValid);
-    field.classList.toggle('popup__input--success', isValid && field.value.trim() !== '');
+    field.classList.toggle(this.config.inputErrorClass, !isValid);
+    field.classList.toggle(this.config.inputSuccessClass, isValid && field.value.trim() !== '');
     
     // Создаем или обновляем сообщение об ошибке
-    let errorElement = field.parentNode.querySelector('.popup__error');
+    let errorElement = field.parentNode.querySelector(`.${this.config.errorClass}`);
     if (!errorElement) {
       errorElement = document.createElement('span');
-      errorElement.className = 'popup__error';
+      errorElement.className = this.config.errorClass;
       field.parentNode.appendChild(errorElement);
     }
     
@@ -139,9 +155,19 @@ export class FormValidator {
   }
 
   setCheckboxState(checkbox, isValid) {
-    const checkboxGroup = checkbox.closest('.popup__group');
+    const checkboxGroup = checkbox.closest(this.config.groupSelector);
     if (checkboxGroup) {
-      checkboxGroup.classList.toggle('popup__group--error', !isValid);
+      checkboxGroup.classList.toggle(this.config.groupErrorClass, !isValid);
+    
+      // Создаем или обновляем сообщение об ошибке для чекбокса
+      let errorElement = checkboxGroup.querySelector(`.${this.config.errorClass}`);
+      if (!errorElement) {
+        errorElement = document.createElement('span');
+        errorElement.className = this.config.errorClass;
+        checkboxGroup.appendChild(errorElement); // Добавляем в конец группы
+      }
+    
+      errorElement.textContent = isValid ? '' : 'Необходимо согласиться с политикой конфиденциальности';
     }
   }
 
@@ -156,8 +182,8 @@ export class FormValidator {
   }
 
   validateForm() {
-    const inputs = this.form.querySelectorAll('.popup__input');
-    const checkbox = this.form.querySelector('.popup__checkbox');
+    const inputs = this.form.querySelectorAll(this.config.inputSelector);
+    const checkbox = this.form.querySelector(this.config.checkboxSelector);
     
     let isFormValid = true;
 
@@ -191,7 +217,7 @@ export class FormValidator {
   }
 
   hasUserInput() {
-    const inputs = this.form.querySelectorAll('.popup__input');
+    const inputs = this.form.querySelectorAll(this.config.inputSelector);
     for (let input of inputs) {
       if (input.value.trim() !== '') return true;
     }
@@ -200,19 +226,19 @@ export class FormValidator {
 
   clearValidationStates() {
     // Очищаем стили ошибок/успеха
-    this.form.querySelectorAll('.popup__input').forEach(input => {
-      input.classList.remove('popup__input--error', 'popup__input--success');
+    this.form.querySelectorAll(this.config.inputSelector).forEach(input => {
+      input.classList.remove(this.config.inputErrorClass, this.config.inputSuccessClass);
     });
-    
-    // Удаляем сообщения об ошибках
-    this.form.querySelectorAll('.popup__error').forEach(error => {
-      error.remove();
+  
+    // Очищаем сообщения об ошибках (не удаляем элементы)
+    this.form.querySelectorAll(`.${this.config.errorClass}`).forEach(error => {
+      error.textContent = '';
     });
-    
+  
     // Очищаем стили чекбокса
-    const checkboxGroup = this.form.querySelector('.popup__group');
+    const checkboxGroup = this.form.querySelector(this.config.groupSelector);
     if (checkboxGroup) {
-      checkboxGroup.classList.remove('popup__group--error');
+      checkboxGroup.classList.remove(this.config.groupErrorClass);
     }
   }
 
@@ -229,13 +255,14 @@ export class FormValidator {
     //   headers: { 'Content-Type': 'application/json' }
     // })
     
+    this.wasSubmitted = true; // Устанавливаем флаг перед очисткой
     this.showSuccessMessage();
     this.clearForm();
   }
 
   showSuccessMessage() {
     const successMessage = document.createElement('div');
-    successMessage.className = 'popup__success';
+    successMessage.className = this.config.successClass;
     successMessage.textContent = 'Спасибо! Мы свяжемся с вами в ближайшее время.';
     successMessage.style.cssText = `
       background: #00c851;

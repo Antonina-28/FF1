@@ -24,28 +24,11 @@
 }
 
 .total__title {
-    position: relative;
     margin-bottom: rem(12);
     font-family: $secondary-font-bolditalic;
     font-size: rem(22);
     line-height: normal;
     font-style: italic;
-
-    &::after {
-        position: absolute;
-        content: "";
-        right: 0;
-        top: 50%;
-        width: rem(13);
-        height: rem(13);
-        border-radius: 50%;
-        background-color: $brend-color;
-        background-image: url("../../images/icons/head-arrow.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: rem(8) rem(5);
-        transform: translateY(-50%) rotate(-90deg);
-    }
 }
 
 .total__list {
@@ -64,6 +47,6 @@
     line-height: normal;
 }
 
-.total__value {
-    margin: 0;
+.total__name {
+    margin-right: rem(10);
 }

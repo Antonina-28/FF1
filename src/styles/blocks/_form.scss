@@ -43,17 +43,48 @@
     &:checked {
         border: rem(4) solid $brend-color !important;
     }
+
+    &--material {
+        width: fluid(40, 30);
+        height: fluid(40, 30);
+        border-radius: 0;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        &:checked {
+            border: rem(2) solid $brend-color !important;
+        }
+    }
+
+    &--package {        
+        background-image: url("../../images/icons/package.svg");
+    }
+
+    &--zip {
+        background-image: url("../../images/icons/zip.svg");
+    }
+
+    &--box {
+        background-image: url("../../images/icons/box.svg");
+    }
 }
 
 .form__input[type="number"] {
     width: fluid(70, 50);
     height: fluid(40, 20);
     padding: 0 fluid(8, 5);
-    border: none;
+    border: rem(4) solid $white;
+    border-radius: rem(8);
     text-align: center;
 
     &:hover,
     &:focus {
+        border: rem(2) solid $brend-color;
+    }
+
+    &:active {
         border: rem(2) solid $brend-color;
     }
 }
