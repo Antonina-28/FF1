@@ -72,10 +72,14 @@
 
   &__title {
     font-family: $secondary-font-bolditalic;
-    font-size: fluid(60, 36);
+    font-size: fluid(55, 36);
     line-height: normal;
     text-transform: uppercase;
     font-style: italic;
+
+    @include desktop {
+        font-size: rem(55);
+    }
   }
 
   &__description {
